@@ -5,11 +5,203 @@
   },
   "nodes": [
     {
-      "id": "r_16_F1",
-      "name": "Room 16",
+      "id": "r_102_F1",
+      "name": "Room 102",
       "floor": 1,
-      "x": 1304.0,
-      "y": 637.0,
+      "x": 1700.0,
+      "y": 750.0,
+      "type": "room"
+    },
+    {
+      "id": "r_104_F1",
+      "name": "Room 104",
+      "floor": 1,
+      "x": 1600.0,
+      "y": 750.0,
+      "type": "room"
+    },
+    {
+      "id": "r_106_F1",
+      "name": "Room 106",
+      "floor": 1,
+      "x": 1500.0,
+      "y": 750.0,
+      "type": "room"
+    },
+    {
+      "id": "r_103_F1",
+      "name": "Room 103",
+      "floor": 1,
+      "x": 1650.0,
+      "y": 1000.0,
+      "type": "room"
+    },
+    {
+      "id": "r_01_F1",
+      "name": "Room 01",
+      "floor": 1,
+      "x": 150.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_03_F1",
+      "name": "Room 03",
+      "floor": 1,
+      "x": 250.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_04_F1",
+      "name": "Room 04",
+      "floor": 1,
+      "x": 400.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_07_F1",
+      "name": "Room 07",
+      "floor": 1,
+      "x": 600.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_09_F1",
+      "name": "Room 09",
+      "floor": 1,
+      "x": 700.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_010_F1",
+      "name": "Room 010",
+      "floor": 1,
+      "x": 800.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_015_F1",
+      "name": "Room 015",
+      "floor": 1,
+      "x": 900.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_017_F1",
+      "name": "Room 017",
+      "floor": 1,
+      "x": 1000.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_019_F1",
+      "name": "Room 019",
+      "floor": 1,
+      "x": 1100.0,
+      "y": 1450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_021_F1",
+      "name": "Room 021",
+      "floor": 1,
+      "x": 600.0,
+      "y": 950.0,
+      "type": "room"
+    },
+    {
+      "id": "r_023_F1",
+      "name": "Room 023",
+      "floor": 1,
+      "x": 600.0,
+      "y": 1050.0,
+      "type": "room"
+    },
+    {
+      "id": "r_025_F1",
+      "name": "Room 025",
+      "floor": 1,
+      "x": 600.0,
+      "y": 1150.0,
+      "type": "room"
+    },
+    {
+      "id": "r_022_F1",
+      "name": "Room 022",
+      "floor": 1,
+      "x": 750.0,
+      "y": 950.0,
+      "type": "room"
+    },
+    {
+      "id": "r_020_F1",
+      "name": "Room 020",
+      "floor": 1,
+      "x": 750.0,
+      "y": 1050.0,
+      "type": "room"
+    },
+    {
+      "id": "r_018_F1",
+      "name": "Room 018",
+      "floor": 1,
+      "x": 750.0,
+      "y": 1150.0,
+      "type": "room"
+    },
+    {
+      "id": "r_016_F1",
+      "name": "Room 016",
+      "floor": 1,
+      "x": 750.0,
+      "y": 1250.0,
+      "type": "room"
+    },
+    {
+      "id": "r_140_F1",
+      "name": "Room 140",
+      "floor": 1,
+      "x": 450.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_136_F1",
+      "name": "Room 136",
+      "floor": 1,
+      "x": 700.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_134_F1",
+      "name": "Room 134",
+      "floor": 1,
+      "x": 850.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "lib_F1",
+      "name": "Библиотека",
+      "floor": 1,
+      "x": 1400.0,
+      "y": 350.0,
+      "type": "room"
+    },
+    {
+      "id": "reading_F1",
+      "name": "Читальный зал",
+      "floor": 1,
+      "x": 1400.0,
+      "y": 150.0,
       "type": "room"
     }
   ],
