@@ -1,7 +1,8 @@
 {
   "floorMaps": {
     "0": "floor_0.jpg",
-    "1": "floor_1.jpg"
+    "1": "floor_1.jpg",
+    "2": "floor_2.jpg"
   },
   "nodes": [
     {
@@ -203,6 +204,182 @@
       "x": 1400.0,
       "y": 150.0,
       "type": "room"
+    },
+    {
+      "id": "r_aktoviy_F2",
+      "name": "Актовый зал",
+      "floor": 2,
+      "x": 750.0,
+      "y": 450.0,
+      "type": "room"
+    },
+    {
+      "id": "r_sport_F2",
+      "name": "Спортзал",
+      "floor": 2,
+      "x": 750.0,
+      "y": 700.0,
+      "type": "room"
+    },
+    {
+      "id": "r_206_F2",
+      "name": "Room 206",
+      "floor": 2,
+      "x": 1250.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_208_F2",
+      "name": "Room 208",
+      "floor": 2,
+      "x": 1150.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_210_F2",
+      "name": "Room 210",
+      "floor": 2,
+      "x": 1050.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_211_F2",
+      "name": "Room 211",
+      "floor": 2,
+      "x": 1150.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_218_F2",
+      "name": "Room 218",
+      "floor": 2,
+      "x": 950.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_220_F2",
+      "name": "Room 220",
+      "floor": 2,
+      "x": 850.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_222_F2",
+      "name": "Room 222",
+      "floor": 2,
+      "x": 750.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_224_F2",
+      "name": "Room 224",
+      "floor": 2,
+      "x": 650.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_226_F2",
+      "name": "Room 226",
+      "floor": 2,
+      "x": 550.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_213_F2",
+      "name": "Room 213",
+      "floor": 2,
+      "x": 950.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_215_F2",
+      "name": "Room 215",
+      "floor": 2,
+      "x": 850.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_217_F2",
+      "name": "Room 217",
+      "floor": 2,
+      "x": 750.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_219_F2",
+      "name": "Room 219",
+      "floor": 2,
+      "x": 650.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_221_F2",
+      "name": "Room 221",
+      "floor": 2,
+      "x": 550.0,
+      "y": 1200.0,
+      "type": "room"
+    },
+    {
+      "id": "r_2_F2",
+      "name": "Room 2",
+      "floor": 2,
+      "x": 150.0,
+      "y": 1800.0,
+      "type": "room"
+    },
+    {
+      "id": "r_5a_F2",
+      "name": "Room 5a",
+      "floor": 2,
+      "x": 300.0,
+      "y": 1800.0,
+      "type": "room"
+    },
+    {
+      "id": "r_hr_F2",
+      "name": "Управление кадров",
+      "floor": 2,
+      "x": 500.0,
+      "y": 1800.0,
+      "type": "room"
+    },
+    {
+      "id": "r_11_F2",
+      "name": "Room 11",
+      "floor": 2,
+      "x": 150.0,
+      "y": 1900.0,
+      "type": "room"
+    },
+    {
+      "id": "r_13_F2",
+      "name": "Room 13",
+      "floor": 2,
+      "x": 300.0,
+      "y": 1900.0,
+      "type": "room"
+    },
+    {
+      "id": "stair_main_F2",
+      "name": "Главная лестница",
+      "floor": 2,
+      "x": 1000.0,
+      "y": 1150.0,
+      "type": "stairs"
     }
   ],
   "edges": []
