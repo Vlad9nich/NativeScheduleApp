@@ -49,8 +49,8 @@ val BrandRed = Color(0xFFE50914)
 val BrandLightGray = Color(0xFFA3A3A3)
 
 
-val Oswald = FontFamily(Font(R.font.oswald))
-val Manrope = FontFamily(Font(R.font.manrope))
+val Oswald = FontFamily.SansSerif
+val Manrope = FontFamily.SansSerif
 
 val AppTypography = Typography(
     displayLarge = TextStyle(fontFamily = Oswald),
@@ -134,12 +134,39 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun loadSchedule(): Map<String, List<WeekSchedule>> {
-        val type = object : TypeToken<Map<String, List<WeekSchedule>>>() {}.type
+        val type = object : TypeToken<Map<String, List<JsonWeekSchedule>>>() {}.type
         val gson = Gson()
         return try {
             val stream = assets.open("schedule_data.json")
             val reader = InputStreamReader(stream)
-            gson.fromJson(reader, type)
+            val parsed: Map<String, List<JsonWeekSchedule>> = gson.fromJson(reader, type)
+            
+            parsed.mapValues { (_, jsonWeeks) ->
+                jsonWeeks.mapIndexed { index, jsonWeek ->
+                    WeekSchedule(
+                        weekNumber = index + 1,
+                        days = jsonWeek.days.mapValues { (_, jsonDay) ->
+                            DaySchedule(
+                                isoDate = jsonDay.isoDate ?: "",
+                                items = jsonDay.classes.map { jsonClass ->
+                                    val typeStr = if (jsonClass.subject.startsWith("л.", true)) "Лекция"
+                                                  else if (jsonClass.subject.startsWith("пр.", true) || jsonClass.subject.startsWith("лаб.", true)) "Практика"
+                                                  else "Занятие"
+                                    ClassInfo(
+                                        id = UUID.randomUUID().toString(),
+                                        subject = jsonClass.subject.removePrefix("л. ").removePrefix("пр. ").removePrefix("лаб. ").trim(),
+                                        type = typeStr,
+                                        teacher = jsonClass.teacher,
+                                        room = jsonClass.room,
+                                        time = "${jsonClass.start} - ${jsonClass.end}",
+                                        color = ""
+                                    )
+                                }
+                            )
+                        }
+                    )
+                }
+            }
         } catch (e: Exception) {
             emptyMap()
         }

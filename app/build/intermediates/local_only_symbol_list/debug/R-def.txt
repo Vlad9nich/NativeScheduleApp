@@ -1,3 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+font manrope
+font oswald
+mipmap ic_launcher
 style Theme.ScheduleApp

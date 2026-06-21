@@ -19,7 +19,8 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:extractNativeLibs="false"
-        android:label="Расписание"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Расписание сессии ВГУИТ"
         android:theme="@style/Theme.ScheduleApp" >
         <activity
             android:name="ru.kernelordexter.app.MainActivity"

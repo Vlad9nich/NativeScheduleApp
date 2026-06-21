@@ -55,6 +55,23 @@
                     }
                 },
                 {
+                    "source": "/root/DevWorkspace/Android/NativeScheduleApp/app/src/main/res/values/themes.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "88",
+                        "endOffsets": "139"
+                    },
+                    "to": {
+                        "startLines": "148",
+                        "startColumns": "4",
+                        "startOffsets": "8881",
+                        "endColumns": "87",
+                        "endOffsets": "8964"
+                    }
+                },
+                {
                     "source": "/root/.gradle/caches/8.11.1/transforms/2b32e36cbb74ac69bf1c6aadc7fc56f9/transformed/customview-poolingcontainer-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2,3",
@@ -69,23 +86,6 @@
                         "startOffsets": "4515,4639",
                         "endColumns": "53,66",
                         "endOffsets": "4564,4701"
-                    }
-                },
-                {
-                    "source": "/root/NativeScheduleApp/app/src/main/res/values/themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "88",
-                        "endOffsets": "139"
-                    },
-                    "to": {
-                        "startLines": "148",
-                        "startColumns": "4",
-                        "startOffsets": "8881",
-                        "endColumns": "87",
-                        "endOffsets": "8964"
                     }
                 },
                 {
