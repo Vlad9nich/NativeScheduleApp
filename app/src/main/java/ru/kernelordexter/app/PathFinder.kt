@@ -11,7 +11,9 @@ data class MapNode(
     val floor: Int,
     val x: Float,
     val y: Float,
-    val type: String
+    val type: String,
+    val width: Float? = null,
+    val height: Float? = null
 )
 
 data class MapEdge(

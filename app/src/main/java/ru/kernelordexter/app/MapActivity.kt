@@ -75,6 +75,13 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.text.drawText
+import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.geometry.CornerRadius
+import androidx.compose.ui.geometry.Size
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.gson.Gson
@@ -389,30 +396,13 @@ fun MapNavigationScreen(
                     // ── Map with route ────────────────────────────────────
                     Box(modifier = Modifier.weight(1f)) {
                         val gd = graphData
-                        if (gd != null) {
-                            val floorKey = selectedFloor.toString()
-                            val floorFileName = gd.floorMaps[floorKey]
-
-                            if (floorFileName != null) {
+                            if (gd != null) {
                                 InteractiveMapView(
-                                    floorFileName = floorFileName,
-                                    loadFloorBitmap = loadFloorBitmap,
+                                    graphData = gd,
                                     routeNodes = routeNodes,
                                     selectedFloor = selectedFloor
                                 )
-                            } else {
-                                Box(
-                                    modifier = Modifier.fillMaxSize(),
-                                    contentAlignment = Alignment.Center
-                                ) {
-                                    Text(
-                                        text = "Карта этажа недоступна",
-                                        color = BrandLightGray,
-                                        fontFamily = MapManrope
-                                    )
-                                }
                             }
-                        }
                     }
 
                     // ── Route info card ───────────────────────────────────
@@ -487,15 +477,11 @@ private fun FloorSelectorRow(
 
 @Composable
 private fun InteractiveMapView(
-    floorFileName: String,
-    loadFloorBitmap: (String) -> android.graphics.Bitmap,
+    graphData: GraphData,
     routeNodes: List<MapNode>,
     selectedFloor: Int
 ) {
-    // Load floor bitmap (cached per floor file name)
-    val imageBitmap = remember(floorFileName) {
-        loadFloorBitmap(floorFileName).asImageBitmap()
-    }
+    val textMeasurer = rememberTextMeasurer()
 
     // Zoom and pan state
     var scale by remember { mutableStateOf(1f) }
@@ -544,12 +530,93 @@ private fun InteractiveMapView(
                     translationY = offset.y
                 )
         ) {
-            // Floor map image
-            Image(
-                bitmap = imageBitmap,
-                contentDescription = "Карта этажа $selectedFloor",
-                modifier = Modifier.fillMaxSize()
-            )
+            // Vector Map Canvas
+            Canvas(modifier = Modifier.fillMaxSize()) {
+                val currentScale = scale.coerceAtLeast(0.5f)
+
+                // 1. Draw corridors (edges between nodes on this floor)
+                for (edge in graphData.edges) {
+                    val fromNode = graphData.nodes.find { it.id == edge.fromId }
+                    val toNode = graphData.nodes.find { it.id == edge.toId }
+                    if (fromNode != null && toNode != null && fromNode.floor == selectedFloor && toNode.floor == selectedFloor) {
+                        drawLine(
+                            color = Color.White.copy(alpha = 0.15f),
+                            start = Offset(fromNode.x, fromNode.y),
+                            end = Offset(toNode.x, toNode.y),
+                            strokeWidth = 20f / currentScale.toFloat(),
+                            cap = StrokeCap.Round
+                        )
+                    }
+                }
+
+                // 2. Draw rooms
+                for (node in graphData.nodes) {
+                    if (node.floor == selectedFloor) {
+                        if (node.type == "room" && node.width != null && node.height != null) {
+                            val rectSize = Size(node.width, node.height)
+                            val topLeft = Offset(node.x - rectSize.width / 2, node.y - rectSize.height / 2)
+                            
+                            // Room background
+                            drawRoundRect(
+                                color = Color(0xFF2A2A2A),
+                                topLeft = topLeft,
+                                size = rectSize,
+                                cornerRadius = CornerRadius(8f / currentScale.toFloat(), 8f / currentScale.toFloat())
+                            )
+                            // Room border
+                            drawRoundRect(
+                                color = Color.White.copy(alpha = 0.1f),
+                                topLeft = topLeft,
+                                size = rectSize,
+                                cornerRadius = CornerRadius(8f / currentScale.toFloat(), 8f / currentScale.toFloat()),
+                                style = Stroke(width = 2f / currentScale.toFloat())
+                            )
+
+                            // Room text
+                            val textLayoutResult = textMeasurer.measure(
+                                text = node.name,
+                                style = TextStyle(
+                                    fontFamily = MapManrope,
+                                    fontSize = (node.height * 0.4f).sp,
+                                    color = Color.White,
+                                    fontWeight = FontWeight.Medium
+                                )
+                            )
+                            drawText(
+                                textLayoutResult = textLayoutResult,
+                                topLeft = Offset(
+                                    node.x - textLayoutResult.size.width / 2f,
+                                    node.y - textLayoutResult.size.height / 2f
+                                )
+                            )
+                        } else if (node.type == "staircase") {
+                             val rectSize = Size(40f, 40f)
+                             val topLeft = Offset(node.x - rectSize.width / 2, node.y - rectSize.height / 2)
+                             drawRoundRect(
+                                color = Color(0xFFFFA726).copy(alpha = 0.2f),
+                                topLeft = topLeft,
+                                size = rectSize,
+                                cornerRadius = CornerRadius(4f / currentScale.toFloat(), 4f / currentScale.toFloat())
+                             )
+                             val textLayoutResult = textMeasurer.measure(
+                                text = "Лестница",
+                                style = TextStyle(
+                                    fontFamily = MapManrope,
+                                    fontSize = 12.sp,
+                                    color = Color(0xFFFFA726),
+                                    fontWeight = FontWeight.Bold
+                                )
+                             )
+                             drawText(
+                                textLayoutResult = textLayoutResult,
+                                topLeft = Offset(
+                                    node.x - textLayoutResult.size.width / 2f,
+                                    node.y - textLayoutResult.size.height / 2f
+                                )
+                             )
+                        }
+                    }
+                }
 
             // Route overlay canvas
             if (floorRouteNodes.isNotEmpty()) {
