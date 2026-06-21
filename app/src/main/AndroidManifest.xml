@@ -14,5 +14,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MapActivity" android:theme="@style/Theme.ScheduleApp" />
     </application>
 </manifest>

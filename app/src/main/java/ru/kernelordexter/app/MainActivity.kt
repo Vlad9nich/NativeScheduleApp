@@ -437,6 +437,33 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
             } else {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
                     items(activeDayItems) { classItem ->
+                        var mapDialogTarget by remember { mutableStateOf<ClassInfo?>(null) }
+                        
+                        if (mapDialogTarget != null) {
+                            AlertDialog(
+                                onDismissRequest = { mapDialogTarget = null },
+                                title = { Text("Навигация", color = Color.White) },
+                                text = { Text("Хотите построить маршрут или посмотреть на карте здания кабинет ${mapDialogTarget?.room}?", color = BrandLightGray) },
+                                confirmButton = {
+                                    Button(
+                                        onClick = {
+                                            val context = prefs.context
+                                            val intent = android.content.Intent(context, MapActivity::class.java).apply {
+                                                putExtra("TARGET_ROOM", mapDialogTarget?.room)
+                                            }
+                                            context.startActivity(intent)
+                                            mapDialogTarget = null
+                                        },
+                                        colors = ButtonDefaults.buttonColors(containerColor = BrandRed)
+                                    ) { Text("Открыть карту", color = Color.White) }
+                                },
+                                dismissButton = {
+                                    TextButton(onClick = { mapDialogTarget = null }) { Text("Отмена", color = BrandLightGray) }
+                                },
+                                containerColor = BrandDarkGray
+                            )
+                        }
+
                         ClassRow(
                             item = classItem,
                             isEditMode = isEditMode,
@@ -445,6 +472,8 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                                     editingClass = classItem
                                     editTargetDay = pageDayKey
                                     showEditModal = true
+                                } else {
+                                    mapDialogTarget = classItem
                                 }
                             }
                         )
@@ -503,7 +532,7 @@ fun ClassRow(item: ClassInfo, isEditMode: Boolean = false, onClick: () -> Unit =
             .padding(bottom = 12.dp)
             .background(BrandDarkGray, RoundedCornerShape(12.dp))
             .border(1.dp, if (isEditMode) BrandRed else Color.White.copy(alpha = 0.1f), RoundedCornerShape(12.dp))
-            .then(if (isEditMode) Modifier.clickable { onClick() } else Modifier)
+            .then(Modifier.clickable { onClick() })
             .padding(12.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -626,7 +655,7 @@ fun EditClassModal(
     )
 }
 
-class PreferencesManager(context: Context) {
+class PreferencesManager(val context: Context) {
     private val prefs: SharedPreferences = context.getSharedPreferences("schedule_prefs", Context.MODE_PRIVATE)
     private val gson = Gson()
 
