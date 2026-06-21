@@ -77,11 +77,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.rememberTextMeasurer
+import androidx.compose.ui.text.ExperimentalTextApi
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.google.gson.Gson
@@ -475,6 +473,7 @@ private fun FloorSelectorRow(
 
 // ─── Interactive map view ────────────────────────────────────────────────────
 
+@OptIn(ExperimentalTextApi::class)
 @Composable
 private fun InteractiveMapView(
     graphData: GraphData,
@@ -616,13 +615,10 @@ private fun InteractiveMapView(
                              )
                         }
                     }
-                }
+                } // Ends 2. Draw rooms
 
-            // Route overlay canvas
-            if (floorRouteNodes.isNotEmpty()) {
-                Canvas(modifier = Modifier.fillMaxSize()) {
-                    val currentScale = scale.coerceAtLeast(0.5f)
-
+                // Route overlay inside the same Canvas
+                if (floorRouteNodes.isNotEmpty()) {
                     // Draw route path segments
                     for (segment in floorRouteNodes) {
                         if (segment.size >= 2) {
@@ -740,7 +736,7 @@ private fun InteractiveMapView(
                         )
                     }
                 }
-            }
+            } // Ends Canvas
         }
 
         // Zoom indicator
