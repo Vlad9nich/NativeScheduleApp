@@ -10,6 +10,8 @@ import androidx.compose.foundation.gestures.detectTransformGestures
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.Offset
@@ -57,7 +59,7 @@ fun MapScreen(targetRoom: String, loadBitmap: () -> android.graphics.Bitmap) {
     val bitmap = remember { loadBitmap().asImageBitmap() }
     
     // Zoom & Pan state
-    var scale by remember { mutableFloatStateOf(1f) }
+    var scale by remember { mutableStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
 
     // Mock graph data for demonstration
@@ -80,7 +82,7 @@ fun MapScreen(targetRoom: String, loadBitmap: () -> android.graphics.Bitmap) {
     Column(modifier = Modifier.fillMaxSize()) {
         TopAppBar(
             title = { Text("Навигация ВГУИТ", color = Color.White, fontFamily = Oswald) },
-            colors = TopAppBarDefaults.topAppBarColors(containerColor = BrandDarkGray)
+            colors = TopAppBarDefaults.smallTopAppBarColors(containerColor = BrandDarkGray)
         )
         
         Box(modifier = Modifier.fillMaxWidth().padding(16.dp)) {
