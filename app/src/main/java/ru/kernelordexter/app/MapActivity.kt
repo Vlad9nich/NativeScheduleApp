@@ -44,7 +44,7 @@ class MapActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     MapScreen(targetRoom = targetRoom, loadBitmap = {
-                        val stream = assets.open("maps/texture_3.png")
+                        val stream = assets.open("maps/file_196.jpg")
                         BitmapFactory.decodeStream(stream)
                     })
                 }
