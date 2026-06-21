@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-18:12
-INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-18:12
+ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-19:12
+INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:1-19:12
 MERGED from [androidx.compose.material3:material3:1.0.0] /root/.gradle/caches/8.11.1/transforms/e9ed33128397198c166091f7de4df2fb/transformed/material3-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity:1.8.0] /root/.gradle/caches/8.11.1/transforms/190b978f9a0d36ce6ed27d0c6108ce46/transformed/activity-1.8.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.activity:activity-ktx:1.8.0] /root/.gradle/caches/8.11.1/transforms/e84cb71c52e229881f2f133833568fe1/transformed/activity-ktx-1.8.0/AndroidManifest.xml:2:1-7:12
@@ -53,8 +53,8 @@ MERGED from [androidx.tracing:tracing:1.0.0] /root/.gradle/caches/8.11.1/transfo
 	xmlns:android
 		ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:3:5-17:19
-INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:3:5-17:19
+ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:3:5-18:19
+INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:3:5-18:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/8.11.1/transforms/eddb69a370fa63b94cdc96fb6e382be8/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.emoji2:emoji2:1.3.0] /root/.gradle/caches/8.11.1/transforms/eddb69a370fa63b94cdc96fb6e382be8/transformed/emoji2-1.3.0/AndroidManifest.xml:23:5-33:19
 MERGED from [androidx.lifecycle:lifecycle-process:2.6.2] /root/.gradle/caches/8.11.1/transforms/bbf71e1a9b447b6f2122e2d0117c1f03/transformed/lifecycle-process-2.6.2/AndroidManifest.xml:23:5-33:19
@@ -97,6 +97,12 @@ category#android.intent.category.LAUNCHER
 ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:14:17-77
 	android:name
 		ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:14:27-74
+activity#ru.kernelordexter.app.MapActivity
+ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:17:9-90
+	android:theme
+		ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:17:47-87
+	android:name
+		ADDED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml:17:19-46
 uses-sdk
 INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /root/DevWorkspace/Android/NativeScheduleApp/app/src/main/AndroidManifest.xml

@@ -1,8 +1,16 @@
 package ru.kernelordexter.app
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.*
+import androidx.compose.animation.core.*
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Canvas
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -10,64 +18,74 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.*
-import androidx.compose.animation.core.*
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
-import androidx.compose.ui.text.font.Font
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.TextStyle
-import androidx.compose.ui.unit.sp
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-import java.net.URL
-import java.io.InputStreamReader
-import java.text.SimpleDateFormat
-import java.util.*
-import android.content.Context
-import android.content.SharedPreferences
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.Offset
+import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.InputStreamReader
+import java.text.SimpleDateFormat
+import java.util.*
+import ru.kernelordexter.app.R
 
 val BrandBlack = Color(0xFF0A0A0A)
 val BrandDarkGray = Color(0xFF171717)
 val BrandRed = Color(0xFFE50914)
 val BrandLightGray = Color(0xFFA3A3A3)
+val GlassBackground = Color(0x171717).copy(alpha = 0.7f)
+val GlassBorder = Color(0xFFFFFFFF).copy(alpha = 0.05f)
 
+val Oswald = FontFamily(
+    Font(R.font.oswald_medium, FontWeight.Medium),
+    Font(R.font.oswald_bold, FontWeight.Bold)
+)
 
-val Oswald = FontFamily.SansSerif
-val Manrope = FontFamily.SansSerif
+val Manrope = FontFamily(
+    Font(R.font.manrope_regular, FontWeight.Normal),
+    Font(R.font.manrope_medium, FontWeight.Medium),
+    Font(R.font.manrope_semibold, FontWeight.SemiBold),
+    Font(R.font.manrope_bold, FontWeight.Bold),
+    Font(R.font.manrope_extrabold, FontWeight.ExtraBold)
+)
 
 val AppTypography = Typography(
-    displayLarge = TextStyle(fontFamily = Oswald),
-    displayMedium = TextStyle(fontFamily = Oswald),
-    displaySmall = TextStyle(fontFamily = Oswald),
-    headlineLarge = TextStyle(fontFamily = Oswald),
-    headlineMedium = TextStyle(fontFamily = Oswald),
-    headlineSmall = TextStyle(fontFamily = Oswald),
-    titleLarge = TextStyle(fontFamily = Oswald),
-    titleMedium = TextStyle(fontFamily = Oswald),
-    titleSmall = TextStyle(fontFamily = Oswald),
-    bodyLarge = TextStyle(fontFamily = Manrope),
-    bodyMedium = TextStyle(fontFamily = Manrope),
-    bodySmall = TextStyle(fontFamily = Manrope),
-    labelLarge = TextStyle(fontFamily = Manrope),
-    labelMedium = TextStyle(fontFamily = Manrope),
-    labelSmall = TextStyle(fontFamily = Manrope),
+    displayLarge = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Bold, fontSize = 57.sp),
+    displayMedium = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Bold, fontSize = 45.sp),
+    displaySmall = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Bold, fontSize = 36.sp),
+    headlineLarge = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Bold, fontSize = 32.sp),
+    headlineMedium = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Medium, fontSize = 28.sp),
+    headlineSmall = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Medium, fontSize = 24.sp),
+    titleLarge = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Medium, fontSize = 22.sp),
+    titleMedium = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Medium, fontSize = 16.sp),
+    titleSmall = TextStyle(fontFamily = Oswald, fontWeight = FontWeight.Medium, fontSize = 14.sp),
+    bodyLarge = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Normal, fontSize = 16.sp),
+    bodyMedium = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Normal, fontSize = 14.sp),
+    bodySmall = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Normal, fontSize = 12.sp),
+    labelLarge = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Medium, fontSize = 14.sp),
+    labelMedium = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Medium, fontSize = 12.sp),
+    labelSmall = TextStyle(fontFamily = Manrope, fontWeight = FontWeight.Medium, fontSize = 11.sp)
 )
 
 enum class LiveStatus(val label: String, val color: Color) {
@@ -121,6 +139,16 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
+                    Canvas(modifier = Modifier.fillMaxSize()) {
+                        drawRect(
+                            brush = Brush.radialGradient(
+                                colors = listOf(BrandRed.copy(alpha = 0.2f), Color.Transparent),
+                                center = Offset(size.width / 2f, 0f),
+                                radius = size.width
+                            )
+                        )
+                    }
+
                     if (scheduleData == null) {
                         Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                             CircularProgressIndicator(color = BrandRed)
@@ -199,6 +227,9 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
         }
     }
 
+    val timeFormat = remember { SimpleDateFormat("HH:mm:ss", Locale.getDefault()).apply { timeZone = TimeZone.getTimeZone("Europe/Moscow") } }
+    val dateFormat = remember { SimpleDateFormat("dd MMMM yyyy", Locale("ru")).apply { timeZone = TimeZone.getTimeZone("Europe/Moscow") } }
+
     val todayDayKey = if (currentTime.get(Calendar.DAY_OF_WEEK) == Calendar.SUNDAY) 0 else currentTime.get(Calendar.DAY_OF_WEEK) - 1
     val todaySchedule = activeWeek?.days?.get(todayDayKey.toString())
 
@@ -259,13 +290,16 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
     Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
         // Header
         Row(
-            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
+            modifier = Modifier.fillMaxWidth().padding(bottom = 24.dp),
             horizontalArrangement = Arrangement.SpaceBetween,
             verticalAlignment = Alignment.CenterVertically
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Box(
-                    modifier = Modifier.size(48.dp).background(BrandRed, RoundedCornerShape(12.dp)),
+                    modifier = Modifier
+                        .size(48.dp)
+                        .shadow(12.dp, RoundedCornerShape(12.dp), spotColor = BrandRed, ambientColor = BrandRed)
+                        .background(BrandRed, RoundedCornerShape(12.dp)),
                     contentAlignment = Alignment.Center
                 ) {
                     Text("K", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 24.sp, fontFamily = Oswald)
@@ -275,7 +309,7 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                     text = activeGroup,
                     color = Color.White,
                     fontWeight = FontWeight.Bold,
-                    fontSize = 18.sp,
+                    fontSize = 20.sp,
                     fontFamily = Oswald,
                     modifier = Modifier.clickable { 
                         activeGroup = if (activeGroup == "ЗИТ-242") "ЗИТ-241" else "ЗИТ-242" 
@@ -283,69 +317,82 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                 )
             }
             
-            IconButton(onClick = { isEditMode = !isEditMode }) {
+            IconButton(
+                onClick = { isEditMode = !isEditMode },
+                modifier = Modifier
+                    .background(GlassBackground, CircleShape)
+                    .border(1.dp, GlassBorder, CircleShape)
+            ) {
                 Icon(
                     imageVector = if (isEditMode) Icons.Default.Check else Icons.Default.Edit,
                     contentDescription = "Edit Schedule",
-                    tint = Color.White
+                    tint = if (isEditMode) BrandRed else Color.White
                 )
             }
         }
 
         // Live Status
-        Card(
-            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp),
-            colors = CardDefaults.cardColors(containerColor = BrandDarkGray),
-            border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.1f))
+        Column(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp)
+                .background(GlassBackground, RoundedCornerShape(16.dp))
+                .border(1.dp, GlassBorder, RoundedCornerShape(16.dp))
+                .padding(20.dp)
         ) {
-            Column(modifier = Modifier.padding(16.dp)) {
-                Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                    Column {
-                        Text("ВРЕМЯ ПО МОСКВЕ", color = BrandLightGray, fontSize = 12.sp, fontFamily = Oswald)
-                        Text(
-                            text = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).apply { timeZone = TimeZone.getTimeZone("Europe/Moscow") }.format(currentTime.time),
-                            color = Color.White,
-                            fontSize = 40.sp,
-                            fontWeight = FontWeight.Bold,
-                            fontFamily = Oswald
+            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
+                Column {
+                    Text("ВРЕМЯ ПО МОСКВЕ", color = BrandLightGray, fontSize = 12.sp, fontFamily = Oswald)
+                    Text(
+                        text = timeFormat.format(currentTime.time),
+                        color = Color.White,
+                        fontSize = 40.sp,
+                        fontWeight = FontWeight.Bold,
+                        fontFamily = Oswald
+                    )
+                    Text(
+                        text = dateFormat.format(currentTime.time),
+                        color = BrandRed,
+                        fontSize = 14.sp,
+                        fontFamily = Manrope
+                    )
+                }
+                Column(horizontalAlignment = Alignment.End) {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Box(
+                            modifier = Modifier
+                                .size(10.dp)
+                                .shadow(12.dp, CircleShape, spotColor = liveStatus.color, ambientColor = liveStatus.color)
+                                .background(liveStatus.color.copy(alpha = pulseAlpha), CircleShape)
                         )
-                        Text(
-                            text = SimpleDateFormat("dd MMMM yyyy", Locale("ru")).format(currentTime.time),
-                            color = BrandRed,
-                            fontSize = 14.sp
-                        )
+                        Spacer(modifier = Modifier.width(6.dp))
+                        Text(liveStatus.label, color = liveStatus.color, fontWeight = FontWeight.Bold, fontSize = 14.sp, fontFamily = Manrope)
                     }
-                    Column(horizontalAlignment = Alignment.End) {
-                        Row(verticalAlignment = Alignment.CenterVertically) {
-                            Box(modifier = Modifier.size(10.dp).background(liveStatus.color.copy(alpha = pulseAlpha), CircleShape))
-                            Spacer(modifier = Modifier.width(6.dp))
-                            Text(liveStatus.label, color = liveStatus.color, fontWeight = FontWeight.Bold, fontSize = 14.sp)
-                        }
-                        if (liveTimeString.isNotEmpty()) {
-                            Text(liveTimeString, color = BrandLightGray, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp))
-                        }
+                    if (liveTimeString.isNotEmpty()) {
+                        Text(liveTimeString, color = BrandLightGray, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp), fontFamily = Manrope)
                     }
                 }
             }
         }
 
-        Text("РАСПИСАНИЕ", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold, fontFamily = Oswald, modifier = Modifier.padding(bottom = 8.dp))
+        Text("РАСПИСАНИЕ", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold, fontFamily = Oswald, modifier = Modifier.padding(bottom = 12.dp))
 
         // Week Tabs
-        LazyRow(modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp)) {
+        LazyRow(modifier = Modifier.fillMaxWidth().padding(bottom = 12.dp)) {
             items(weeks.indices.toList()) { index ->
                 val isSelected = currentWeekIndex == index
                 Box(
                     modifier = Modifier
                         .padding(end = 8.dp)
                         .background(
-                            if (isSelected) BrandRed else BrandDarkGray,
-                            RoundedCornerShape(8.dp)
+                            if (isSelected) BrandRed else GlassBackground,
+                            RoundedCornerShape(12.dp)
                         )
+                        .border(1.dp, if (isSelected) Color.Transparent else GlassBorder, RoundedCornerShape(12.dp))
                         .clickable { currentWeekIndex = index }
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                 ) {
-                    Text("Неделя ${index + 1}", color = Color.White)
+                    Text("Неделя ${index + 1}", color = Color.White, fontFamily = Manrope, fontWeight = if(isSelected) FontWeight.Bold else FontWeight.Normal)
                 }
             }
         }
@@ -360,7 +407,7 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
             currentDay = dayKeysList[pagerState.currentPage]
         }
 
-        LazyRow(modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)) {
+        LazyRow(modifier = Modifier.fillMaxWidth().padding(bottom = 20.dp)) {
             items(dayKeysList.size) { index ->
                 val dayKey = dayKeysList[index]
                 val isSelected = currentDay == dayKey
@@ -368,16 +415,17 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                     modifier = Modifier
                         .padding(end = 8.dp)
                         .background(
-                            if (isSelected) Color.White.copy(alpha = 0.2f) else BrandDarkGray,
-                            RoundedCornerShape(8.dp)
+                            if (isSelected) Color.White.copy(alpha = 0.15f) else GlassBackground,
+                            RoundedCornerShape(12.dp)
                         )
+                        .border(1.dp, GlassBorder, RoundedCornerShape(12.dp))
                         .clickable { 
                             currentDay = dayKey
                             coroutineScope.launch { pagerState.animateScrollToPage(index) }
                         }
                         .padding(horizontal = 16.dp, vertical = 8.dp)
                 ) {
-                    Text(days[dayKey] ?: "", color = Color.White)
+                    Text(days[dayKey] ?: "", color = Color.White, fontFamily = Manrope, fontWeight = if(isSelected) FontWeight.Bold else FontWeight.Normal)
                 }
             }
         }
@@ -432,51 +480,63 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
 
             if (activeDayItems.isEmpty() && !isEditMode) {
                 Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                    Text("Выходной день", color = BrandLightGray)
+                    Text("Выходной день", color = BrandLightGray, fontFamily = Manrope)
                 }
             } else {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
-                    items(activeDayItems) { classItem ->
+                    items(activeDayItems, key = { it.id }) { classItem ->
                         var mapDialogTarget by remember { mutableStateOf<ClassInfo?>(null) }
+                        var visible by remember { mutableStateOf(false) }
+                        
+                        LaunchedEffect(classItem.id) {
+                            visible = true
+                        }
                         
                         if (mapDialogTarget != null) {
                             AlertDialog(
                                 onDismissRequest = { mapDialogTarget = null },
-                                title = { Text("Навигация", color = Color.White) },
-                                text = { Text("Хотите построить маршрут или посмотреть на карте здания кабинет ${mapDialogTarget?.room}?", color = BrandLightGray) },
+                                title = { Text("Навигация", color = Color.White, fontFamily = Oswald) },
+                                text = { Text("Хотите построить маршрут или посмотреть на карте здания кабинет ${mapDialogTarget?.room}?", color = BrandLightGray, fontFamily = Manrope) },
                                 confirmButton = {
                                     Button(
                                         onClick = {
                                             val context = prefs.context
-                                            val intent = android.content.Intent(context, MapActivity::class.java).apply {
+                                            val intent = Intent(context, MapActivity::class.java).apply {
                                                 putExtra("TARGET_ROOM", mapDialogTarget?.room)
                                             }
                                             context.startActivity(intent)
                                             mapDialogTarget = null
                                         },
-                                        colors = ButtonDefaults.buttonColors(containerColor = BrandRed)
-                                    ) { Text("Открыть карту", color = Color.White) }
+                                        colors = ButtonDefaults.buttonColors(containerColor = BrandRed),
+                                        modifier = Modifier.shadow(8.dp, RoundedCornerShape(24.dp), spotColor = BrandRed, ambientColor = BrandRed)
+                                    ) { Text("Открыть карту", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
                                 },
                                 dismissButton = {
-                                    TextButton(onClick = { mapDialogTarget = null }) { Text("Отмена", color = BrandLightGray) }
+                                    TextButton(onClick = { mapDialogTarget = null }) { Text("Отмена", color = BrandLightGray, fontFamily = Manrope) }
                                 },
-                                containerColor = BrandDarkGray
+                                containerColor = BrandDarkGray,
+                                shape = RoundedCornerShape(16.dp)
                             )
                         }
 
-                        ClassRow(
-                            item = classItem,
-                            isEditMode = isEditMode,
-                            onClick = {
-                                if (isEditMode) {
-                                    editingClass = classItem
-                                    editTargetDay = pageDayKey
-                                    showEditModal = true
-                                } else {
-                                    mapDialogTarget = classItem
+                        AnimatedVisibility(
+                            visible = visible,
+                            enter = slideInVertically(initialOffsetY = { 50 }) + fadeIn(animationSpec = tween(400))
+                        ) {
+                            ClassRow(
+                                item = classItem,
+                                isEditMode = isEditMode,
+                                onClick = {
+                                    if (isEditMode) {
+                                        editingClass = classItem
+                                        editTargetDay = pageDayKey
+                                        showEditModal = true
+                                    } else {
+                                        mapDialogTarget = classItem
+                                    }
                                 }
-                            }
-                        )
+                            )
+                        }
                     }
                     
                     if (isEditMode) {
@@ -487,10 +547,13 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                                     editTargetDay = pageDayKey
                                     showEditModal = true 
                                 },
-                                modifier = Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(vertical = 8.dp)
+                                    .shadow(8.dp, RoundedCornerShape(24.dp), spotColor = BrandRed, ambientColor = BrandRed),
                                 colors = ButtonDefaults.buttonColors(containerColor = BrandRed)
                             ) {
-                                Text("Добавить пару", color = Color.White)
+                                Text("Добавить пару", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold)
                             }
                             
                             Button(
@@ -498,10 +561,13 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                                     prefs.clearCustomSchedule(activeGroup, currentWeekIndex, pageDayKey)
                                     customScheduleState++
                                 },
-                                modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
-                                colors = ButtonDefaults.buttonColors(containerColor = BrandDarkGray)
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(bottom = 8.dp),
+                                colors = ButtonDefaults.buttonColors(containerColor = GlassBackground),
+                                border = BorderStroke(1.dp, GlassBorder)
                             ) {
-                                Text("Сбросить изменения", color = Color.White)
+                                Text("Сбросить изменения", color = Color.White, fontFamily = Manrope)
                             }
                         }
                     }
@@ -511,6 +577,7 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                             "by KernelMod | Баг-репорт: @kernelmodEZ", 
                             color = BrandLightGray, 
                             fontSize = 12.sp,
+                            fontFamily = Manrope,
                             modifier = Modifier.fillMaxWidth().padding(vertical = 24.dp).wrapContentWidth(Alignment.CenterHorizontally)
                         )
                     }
@@ -530,10 +597,10 @@ fun ClassRow(item: ClassInfo, isEditMode: Boolean = false, onClick: () -> Unit =
         modifier = Modifier
             .fillMaxWidth()
             .padding(bottom = 12.dp)
-            .background(BrandDarkGray, RoundedCornerShape(12.dp))
-            .border(1.dp, if (isEditMode) BrandRed else Color.White.copy(alpha = 0.1f), RoundedCornerShape(12.dp))
+            .background(GlassBackground, RoundedCornerShape(16.dp))
+            .border(1.dp, if (isEditMode) BrandRed else GlassBorder, RoundedCornerShape(16.dp))
             .then(Modifier.clickable { onClick() })
-            .padding(12.dp),
+            .padding(16.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Column(
@@ -541,11 +608,11 @@ fun ClassRow(item: ClassInfo, isEditMode: Boolean = false, onClick: () -> Unit =
             modifier = Modifier.width(60.dp)
         ) {
             Text(startTime, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp, fontFamily = Oswald)
-            Text(endTime, color = BrandLightGray, fontSize = 12.sp)
+            Text(endTime, color = BrandLightGray, fontSize = 12.sp, fontFamily = Manrope)
         }
         
         Spacer(modifier = Modifier.width(12.dp))
-        Box(modifier = Modifier.width(2.dp).height(40.dp).background(BrandRed))
+        Box(modifier = Modifier.width(2.dp).height(40.dp).background(BrandRed.copy(alpha = 0.8f)))
         Spacer(modifier = Modifier.width(12.dp))
         
         Column(modifier = Modifier.weight(1f)) {
@@ -555,15 +622,17 @@ fun ClassRow(item: ClassInfo, isEditMode: Boolean = false, onClick: () -> Unit =
                 if (hasExamOrCredit) {
                     Spacer(modifier = Modifier.width(8.dp))
                     Box(modifier = Modifier.background(Color(0xFF8B0000), RoundedCornerShape(4.dp)).padding(horizontal = 4.dp, vertical = 2.dp)) {
-                        Text("ЗАЧЕТ/ЭКЗАМЕН", color = Color.White, fontSize = 8.sp, fontWeight = FontWeight.Bold)
+                        Text("ЗАЧЕТ/ЭКЗАМЕН", color = Color.White, fontSize = 8.sp, fontWeight = FontWeight.Bold, fontFamily = Manrope)
                     }
                 }
             }
+            Spacer(modifier = Modifier.height(4.dp))
             Text(item.subject, color = Color.White, fontWeight = FontWeight.Bold, fontSize = 16.sp, fontFamily = Oswald, maxLines = 2)
-            Row(modifier = Modifier.padding(top = 4.dp)) {
-                Text(item.room, color = BrandLightGray, fontSize = 12.sp)
+            Spacer(modifier = Modifier.height(4.dp))
+            Row {
+                Text(item.room, color = BrandLightGray, fontSize = 12.sp, fontFamily = Manrope)
                 Spacer(modifier = Modifier.width(8.dp))
-                Text(item.teacher, color = BrandLightGray, fontSize = 12.sp, maxLines = 1)
+                Text(item.teacher, color = BrandLightGray, fontSize = 12.sp, maxLines = 1, fontFamily = Manrope)
             }
         }
         if (isEditMode) {
@@ -588,38 +657,55 @@ fun EditClassModal(
 
     AlertDialog(
         onDismissRequest = onDismiss,
-        title = { Text(if (initialClass == null) "Добавить пару" else "Редактировать", color = Color.White) },
+        title = { Text(if (initialClass == null) "Добавить пару" else "Редактировать", color = Color.White, fontFamily = Oswald) },
         text = {
             Column(modifier = Modifier.fillMaxWidth()) {
+                val textFieldColors = TextFieldDefaults.outlinedTextFieldColors(
+                    textColor = Color.White,
+                    unfocusedBorderColor = GlassBorder,
+                    focusedBorderColor = BrandRed,
+                    containerColor = GlassBackground
+                )
+
                 OutlinedTextField(
                     value = time, onValueChange = { time = it },
-                    label = { Text("Время (напр. 09:00 - 10:30)", color = BrandLightGray) },
-                    textStyle = androidx.compose.ui.text.TextStyle(color = Color.White),
-                    modifier = Modifier.fillMaxWidth()
+                    label = { Text("Время (напр. 09:00 - 10:30)", color = BrandLightGray, fontFamily = Manrope) },
+                    textStyle = TextStyle(color = Color.White, fontFamily = Manrope),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
+                    colors = textFieldColors,
+                    shape = RoundedCornerShape(12.dp)
                 )
                 OutlinedTextField(
                     value = subject, onValueChange = { subject = it },
-                    label = { Text("Предмет", color = BrandLightGray) },
-                    textStyle = androidx.compose.ui.text.TextStyle(color = Color.White),
-                    modifier = Modifier.fillMaxWidth()
+                    label = { Text("Предмет", color = BrandLightGray, fontFamily = Manrope) },
+                    textStyle = TextStyle(color = Color.White, fontFamily = Manrope),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
+                    colors = textFieldColors,
+                    shape = RoundedCornerShape(12.dp)
                 )
                 OutlinedTextField(
                     value = type, onValueChange = { type = it },
-                    label = { Text("Тип (Лекция/Практика)", color = BrandLightGray) },
-                    textStyle = androidx.compose.ui.text.TextStyle(color = Color.White),
-                    modifier = Modifier.fillMaxWidth()
+                    label = { Text("Тип (Лекция/Практика)", color = BrandLightGray, fontFamily = Manrope) },
+                    textStyle = TextStyle(color = Color.White, fontFamily = Manrope),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
+                    colors = textFieldColors,
+                    shape = RoundedCornerShape(12.dp)
                 )
                 OutlinedTextField(
                     value = teacher, onValueChange = { teacher = it },
-                    label = { Text("Преподаватель", color = BrandLightGray) },
-                    textStyle = androidx.compose.ui.text.TextStyle(color = Color.White),
-                    modifier = Modifier.fillMaxWidth()
+                    label = { Text("Преподаватель", color = BrandLightGray, fontFamily = Manrope) },
+                    textStyle = TextStyle(color = Color.White, fontFamily = Manrope),
+                    modifier = Modifier.fillMaxWidth().padding(bottom = 8.dp),
+                    colors = textFieldColors,
+                    shape = RoundedCornerShape(12.dp)
                 )
                 OutlinedTextField(
                     value = room, onValueChange = { room = it },
-                    label = { Text("Кабинет", color = BrandLightGray) },
-                    textStyle = androidx.compose.ui.text.TextStyle(color = Color.White),
-                    modifier = Modifier.fillMaxWidth()
+                    label = { Text("Кабинет", color = BrandLightGray, fontFamily = Manrope) },
+                    textStyle = TextStyle(color = Color.White, fontFamily = Manrope),
+                    modifier = Modifier.fillMaxWidth(),
+                    colors = textFieldColors,
+                    shape = RoundedCornerShape(12.dp)
                 )
             }
         },
@@ -638,20 +724,20 @@ fun EditClassModal(
                         )
                     )
                 },
-                colors = ButtonDefaults.buttonColors(containerColor = BrandRed)
-            ) { Text("Сохранить", color = Color.White) }
+                colors = ButtonDefaults.buttonColors(containerColor = BrandRed),
+                modifier = Modifier.shadow(8.dp, RoundedCornerShape(24.dp), spotColor = BrandRed, ambientColor = BrandRed)
+            ) { Text("Сохранить", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
         },
         dismissButton = {
             Row {
                 if (initialClass != null) {
-                    TextButton(onClick = onDelete) { Text("Удалить", color = BrandRed) }
+                    TextButton(onClick = onDelete) { Text("Удалить", color = BrandRed, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
                 }
-                TextButton(onClick = onDismiss) { Text("Отмена", color = BrandLightGray) }
+                TextButton(onClick = onDismiss) { Text("Отмена", color = BrandLightGray, fontFamily = Manrope) }
             }
         },
         containerColor = BrandDarkGray,
-        titleContentColor = Color.White,
-        textContentColor = Color.White
+        shape = RoundedCornerShape(16.dp)
     )
 }
 

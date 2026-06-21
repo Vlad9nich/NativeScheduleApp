@@ -27,7 +27,7 @@ class Graph(nodes: List<MapNode>, edges: List<MapEdge>) {
 
     val nodeToIndex: Map<String, Int>
     val indexToNode: Array<MapNode>
-    val adjacencyList: Array<MutableList<EdgeInt>>
+    internal val adjacencyList: Array<MutableList<EdgeInt>>
     val nodeCount: Int
 
     init {

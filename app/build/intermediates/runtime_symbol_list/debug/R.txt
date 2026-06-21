@@ -64,8 +64,13 @@ int drawable notification_template_icon_bg 0x7f04000f
 int drawable notification_template_icon_low_bg 0x7f040010
 int drawable notification_tile_bg 0x7f040011
 int drawable notify_panel_notification_icon_bg 0x7f040012
-int font manrope 0x7f050000
-int font oswald 0x7f050001
+int font manrope_bold 0x7f050000
+int font manrope_extrabold 0x7f050001
+int font manrope_medium 0x7f050002
+int font manrope_regular 0x7f050003
+int font manrope_semibold 0x7f050004
+int font oswald_bold 0x7f050005
+int font oswald_medium 0x7f050006
 int id accessibility_action_clickable_span 0x7f060000
 int id accessibility_custom_action_0 0x7f060001
 int id accessibility_custom_action_1 0x7f060002

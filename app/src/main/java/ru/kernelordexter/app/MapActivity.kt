@@ -5,6 +5,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.LinearEasing
+import androidx.compose.animation.core.RepeatMode
+import androidx.compose.animation.core.animateFloat
+import androidx.compose.animation.core.infiniteRepeatable
+import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -26,7 +31,7 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Place
 import androidx.compose.material3.Card
@@ -40,12 +45,11 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.material3.Typography
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableFloatStateOf
-import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -53,17 +57,21 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Path
-import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -76,6 +84,39 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.InputStreamReader
 import kotlin.math.roundToInt
+
+// ─── Fonts ───────────────────────────────────────────────────────────────────
+
+private val MapOswald = FontFamily(
+    Font(R.font.oswald_medium, FontWeight.Medium),
+    Font(R.font.oswald_bold, FontWeight.Bold)
+)
+
+private val MapManrope = FontFamily(
+    Font(R.font.manrope_regular, FontWeight.Normal),
+    Font(R.font.manrope_medium, FontWeight.Medium),
+    Font(R.font.manrope_semibold, FontWeight.SemiBold),
+    Font(R.font.manrope_bold, FontWeight.Bold),
+    Font(R.font.manrope_extrabold, FontWeight.ExtraBold)
+)
+
+private val MapTypography = Typography(
+    displayLarge = TextStyle(fontFamily = MapOswald),
+    displayMedium = TextStyle(fontFamily = MapOswald),
+    displaySmall = TextStyle(fontFamily = MapOswald),
+    headlineLarge = TextStyle(fontFamily = MapOswald),
+    headlineMedium = TextStyle(fontFamily = MapOswald),
+    headlineSmall = TextStyle(fontFamily = MapOswald),
+    titleLarge = TextStyle(fontFamily = MapOswald),
+    titleMedium = TextStyle(fontFamily = MapOswald),
+    titleSmall = TextStyle(fontFamily = MapOswald),
+    bodyLarge = TextStyle(fontFamily = MapManrope),
+    bodyMedium = TextStyle(fontFamily = MapManrope),
+    bodySmall = TextStyle(fontFamily = MapManrope),
+    labelLarge = TextStyle(fontFamily = MapManrope),
+    labelMedium = TextStyle(fontFamily = MapManrope),
+    labelSmall = TextStyle(fontFamily = MapManrope),
+)
 
 // ─── Data class for JSON deserialization ─────────────────────────────────────
 
@@ -105,20 +146,46 @@ class MapActivity : ComponentActivity() {
                     onSurface = Color.White,
                     onPrimary = Color.White
                 ),
-                typography = AppTypography
+                typography = MapTypography
             ) {
-                MapNavigationScreen(
-                    targetRoom = targetRoom,
-                    loadGraphData = {
-                        val reader = InputStreamReader(assets.open("maps/graph_data.json"))
-                        Gson().fromJson(reader, GraphData::class.java).also { reader.close() }
-                    },
-                    loadFloorBitmap = { fileName ->
-                        val stream = assets.open("maps/$fileName")
-                        BitmapFactory.decodeStream(stream).also { stream.close() }
-                    },
-                    onBack = { finish() }
+                val infiniteTransition = rememberInfiniteTransition(label = "bg_pulse")
+                val alphaAnim by infiniteTransition.animateFloat(
+                    initialValue = 0.04f,
+                    targetValue = 0.08f,
+                    animationSpec = infiniteRepeatable(
+                        animation = tween(4000, easing = LinearEasing),
+                        repeatMode = RepeatMode.Reverse
+                    ),
+                    label = "bg_alpha"
                 )
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(BrandBlack)
+                        .drawBehind {
+                            drawRect(
+                                brush = Brush.radialGradient(
+                                    colors = listOf(BrandRed.copy(alpha = alphaAnim), Color.Transparent),
+                                    center = Offset(size.width / 2f, 0f),
+                                    radius = size.height * 0.7f
+                                )
+                            )
+                        }
+                ) {
+                    MapNavigationScreen(
+                        targetRoom = targetRoom,
+                        loadGraphData = {
+                            val reader = InputStreamReader(assets.open("maps/graph_data.json"))
+                            Gson().fromJson(reader, GraphData::class.java).also { reader.close() }
+                        },
+                        loadFloorBitmap = { fileName ->
+                            val stream = assets.open("maps/$fileName")
+                            BitmapFactory.decodeStream(stream).also { stream.close() }
+                        },
+                        onBack = { finish() }
+                    )
+                }
             }
         }
     }
@@ -150,7 +217,7 @@ fun MapNavigationScreen(
     var graphData by remember { mutableStateOf<GraphData?>(null) }
     var graph by remember { mutableStateOf<Graph?>(null) }
     var routeNodes by remember { mutableStateOf<List<MapNode>>(emptyList()) }
-    var selectedFloor by remember { mutableIntStateOf(1) }
+    var selectedFloor by remember { mutableStateOf(1) }
     var isLoading by remember { mutableStateOf(true) }
     var errorMessage by remember { mutableStateOf<String?>(null) }
 
@@ -196,7 +263,7 @@ fun MapNavigationScreen(
 
     // ── UI ────────────────────────────────────────────────────────────────
     Scaffold(
-        containerColor = BrandBlack,
+        containerColor = Color.Transparent,
         topBar = {
             TopAppBar(
                 title = {
@@ -204,7 +271,7 @@ fun MapNavigationScreen(
                         Text(
                             text = "Навигация ВГУИТ",
                             color = Color.White,
-                            fontFamily = Oswald,
+                            fontFamily = MapOswald,
                             fontWeight = FontWeight.Bold,
                             fontSize = 20.sp,
                             maxLines = 1,
@@ -213,7 +280,7 @@ fun MapNavigationScreen(
                         Text(
                             text = "Вход → Кабинет $targetRoom",
                             color = BrandLightGray,
-                            fontFamily = Manrope,
+                            fontFamily = MapManrope,
                             fontSize = 13.sp,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis
@@ -223,14 +290,14 @@ fun MapNavigationScreen(
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
-                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            imageVector = Icons.Default.ArrowBack,
                             contentDescription = "Назад",
                             tint = Color.White
                         )
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = BrandDarkGray
+                colors = TopAppBarDefaults.smallTopAppBarColors(
+                    containerColor = Color.Transparent
                 )
             )
         }
@@ -256,7 +323,7 @@ fun MapNavigationScreen(
                             Text(
                                 text = "Построение маршрута…",
                                 color = BrandLightGray,
-                                fontFamily = Manrope,
+                                fontFamily = MapManrope,
                                 fontSize = 14.sp
                             )
                         }
@@ -287,7 +354,7 @@ fun MapNavigationScreen(
                                 Text(
                                     text = errorMessage ?: "",
                                     color = BrandLightGray,
-                                    fontFamily = Manrope,
+                                    fontFamily = MapManrope,
                                     fontSize = 15.sp,
                                     textAlign = TextAlign.Center
                                 )
@@ -325,7 +392,7 @@ fun MapNavigationScreen(
                                     Text(
                                         text = "Карта этажа недоступна",
                                         color = BrandLightGray,
-                                        fontFamily = Manrope
+                                        fontFamily = MapManrope
                                     )
                                 }
                             }
@@ -352,18 +419,17 @@ private fun FloorSelectorRow(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .background(
-                Brush.verticalGradient(
-                    colors = listOf(BrandDarkGray, BrandBlack)
-                )
-            )
-            .padding(horizontal = 12.dp, vertical = 10.dp),
+            .padding(12.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color.White.copy(alpha = 0.03f))
+            .border(1.dp, Color.White.copy(alpha = 0.05f), RoundedCornerShape(16.dp))
+            .padding(8.dp),
         horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         for (floor in 0..4) {
             val isSelected = floor == selectedFloor
             val bgColor by animateColorAsState(
-                targetValue = if (isSelected) BrandRed else BrandDarkGray,
+                targetValue = if (isSelected) BrandRed else Color.Transparent,
                 animationSpec = tween(durationMillis = 250),
                 label = "floorBgColor"
             )
@@ -372,22 +438,18 @@ private fun FloorSelectorRow(
                 animationSpec = tween(durationMillis = 250),
                 label = "floorTextColor"
             )
-            val borderColor by animateColorAsState(
-                targetValue = if (isSelected) BrandRed else Color(0xFF2A2A2A),
-                animationSpec = tween(durationMillis = 250),
-                label = "floorBorderColor"
-            )
 
             Box(
                 modifier = Modifier
                     .weight(1f)
-                    .clip(RoundedCornerShape(12.dp))
-                    .border(
-                        width = 1.dp,
-                        color = borderColor,
-                        shape = RoundedCornerShape(12.dp)
+                    .shadow(
+                        elevation = if (isSelected) 8.dp else 0.dp,
+                        shape = RoundedCornerShape(12.dp),
+                        spotColor = BrandRed,
+                        ambientColor = BrandRed
                     )
-                    .background(bgColor, RoundedCornerShape(12.dp))
+                    .clip(RoundedCornerShape(12.dp))
+                    .background(bgColor)
                     .clickable { onFloorSelected(floor) }
                     .padding(vertical = 10.dp),
                 contentAlignment = Alignment.Center
@@ -395,7 +457,7 @@ private fun FloorSelectorRow(
                 Text(
                     text = FLOOR_LABELS[floor] ?: "$floor",
                     color = textColor,
-                    fontFamily = Manrope,
+                    fontFamily = MapManrope,
                     fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Medium,
                     fontSize = 12.sp,
                     maxLines = 1
@@ -420,7 +482,7 @@ private fun InteractiveMapView(
     }
 
     // Zoom and pan state
-    var scale by remember { mutableFloatStateOf(1f) }
+    var scale by remember { mutableStateOf(1f) }
     var offset by remember { mutableStateOf(Offset.Zero) }
 
     // Reset zoom/pan when floor changes
@@ -434,18 +496,23 @@ private fun InteractiveMapView(
         filterRouteSegmentsForFloor(routeNodes, selectedFloor)
     }
 
+    // Enclose map with simple glassmorphism to fit premium style
     Box(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF050505))
+            .padding(horizontal = 12.dp)
+            .clip(RoundedCornerShape(16.dp))
+            .background(Color.White.copy(alpha = 0.03f))
+            .border(1.dp, Color.White.copy(alpha = 0.05f), RoundedCornerShape(16.dp))
             .pointerInput(Unit) {
                 detectTransformGestures { _, pan, zoom, _ ->
                     val newScale = (scale * zoom).coerceIn(0.5f, 5f)
                     // Adjust pan for scale change
                     val scaleFactor = newScale / scale
+                    val sf = scaleFactor.toFloat()
                     offset = Offset(
-                        x = offset.x * scaleFactor + pan.x,
-                        y = offset.y * scaleFactor + pan.y
+                        x = offset.x * sf + pan.x,
+                        y = offset.y * sf + pan.y
                     )
                     scale = newScale
                 }
@@ -487,7 +554,7 @@ private fun InteractiveMapView(
                                 path = glowPath,
                                 color = BrandRed.copy(alpha = 0.3f),
                                 style = Stroke(
-                                    width = 14f / currentScale,
+                                    width = 14f / currentScale.toFloat(),
                                     cap = StrokeCap.Round,
                                     join = StrokeJoin.Round
                                 )
@@ -504,7 +571,7 @@ private fun InteractiveMapView(
                                 path = mainPath,
                                 color = BrandRed,
                                 style = Stroke(
-                                    width = 6f / currentScale,
+                                    width = 6f / currentScale.toFloat(),
                                     cap = StrokeCap.Round,
                                     join = StrokeJoin.Round
                                 )
@@ -521,20 +588,20 @@ private fun InteractiveMapView(
                         // Outer glow
                         drawCircle(
                             color = Color(0xFF22C55E).copy(alpha = 0.25f),
-                            radius = 24f / currentScale,
+                            radius = 24f / currentScale.toFloat(),
                             center = Offset(firstNodeOnFloor.x, firstNodeOnFloor.y)
                         )
                         // Outer ring
                         drawCircle(
                             color = Color(0xFF22C55E).copy(alpha = 0.5f),
-                            radius = 16f / currentScale,
+                            radius = 16f / currentScale.toFloat(),
                             center = Offset(firstNodeOnFloor.x, firstNodeOnFloor.y),
-                            style = Stroke(width = 3f / currentScale)
+                            style = Stroke(width = 3f / currentScale.toFloat())
                         )
                         // Inner fill
                         drawCircle(
                             color = Color(0xFF22C55E),
-                            radius = 10f / currentScale,
+                            radius = 10f / currentScale.toFloat(),
                             center = Offset(firstNodeOnFloor.x, firstNodeOnFloor.y)
                         )
                     }
@@ -544,20 +611,20 @@ private fun InteractiveMapView(
                         // Outer glow
                         drawCircle(
                             color = BrandRed.copy(alpha = 0.25f),
-                            radius = 24f / currentScale,
+                            radius = 24f / currentScale.toFloat(),
                             center = Offset(lastNodeOnFloor.x, lastNodeOnFloor.y)
                         )
                         // Outer ring
                         drawCircle(
                             color = BrandRed.copy(alpha = 0.5f),
-                            radius = 16f / currentScale,
+                            radius = 16f / currentScale.toFloat(),
                             center = Offset(lastNodeOnFloor.x, lastNodeOnFloor.y),
-                            style = Stroke(width = 3f / currentScale)
+                            style = Stroke(width = 3f / currentScale.toFloat())
                         )
                         // Inner fill
                         drawCircle(
                             color = BrandRed,
-                            radius = 10f / currentScale,
+                            radius = 10f / currentScale.toFloat(),
                             center = Offset(lastNodeOnFloor.x, lastNodeOnFloor.y)
                         )
                     }
@@ -567,12 +634,12 @@ private fun InteractiveMapView(
                         // Route enters this floor (not the start)
                         drawCircle(
                             color = Color(0xFFFFA726).copy(alpha = 0.4f),
-                            radius = 20f / currentScale,
+                            radius = 20f / currentScale.toFloat(),
                             center = Offset(firstNodeOnFloor.x, firstNodeOnFloor.y)
                         )
                         drawCircle(
                             color = Color(0xFFFFA726),
-                            radius = 10f / currentScale,
+                            radius = 10f / currentScale.toFloat(),
                             center = Offset(firstNodeOnFloor.x, firstNodeOnFloor.y)
                         )
                     }
@@ -580,12 +647,12 @@ private fun InteractiveMapView(
                         // Route exits this floor (not the destination)
                         drawCircle(
                             color = Color(0xFFFFA726).copy(alpha = 0.4f),
-                            radius = 20f / currentScale,
+                            radius = 20f / currentScale.toFloat(),
                             center = Offset(lastNodeOnFloor.x, lastNodeOnFloor.y)
                         )
                         drawCircle(
                             color = Color(0xFFFFA726),
-                            radius = 10f / currentScale,
+                            radius = 10f / currentScale.toFloat(),
                             center = Offset(lastNodeOnFloor.x, lastNodeOnFloor.y)
                         )
                     }
@@ -599,13 +666,14 @@ private fun InteractiveMapView(
                 .align(Alignment.BottomStart)
                 .padding(12.dp)
                 .clip(RoundedCornerShape(8.dp))
-                .background(BrandDarkGray.copy(alpha = 0.85f))
+                .background(Color.White.copy(alpha = 0.1f))
+                .border(1.dp, Color.White.copy(alpha = 0.1f), RoundedCornerShape(8.dp))
                 .padding(horizontal = 10.dp, vertical = 6.dp)
         ) {
             Text(
                 text = "${(scale * 100).roundToInt()}%",
                 color = BrandLightGray,
-                fontFamily = Manrope,
+                fontFamily = MapManrope,
                 fontSize = 11.sp
             )
         }
@@ -649,10 +717,11 @@ private fun RouteInfoCard(routeNodes: List<MapNode>) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 12.dp, vertical = 8.dp),
+            .padding(horizontal = 12.dp, vertical = 12.dp),
         shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = BrandDarkGray),
-        elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+        colors = CardDefaults.cardColors(containerColor = Color.White.copy(alpha = 0.03f)),
+        elevation = CardDefaults.cardElevation(defaultElevation = 0.dp),
+        border = androidx.compose.foundation.BorderStroke(1.dp, Color.White.copy(alpha = 0.05f))
     ) {
         Row(
             modifier = Modifier
@@ -660,12 +729,18 @@ private fun RouteInfoCard(routeNodes: List<MapNode>) {
                 .padding(16.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            // Route icon
+            // Route icon with red glow
             Box(
                 modifier = Modifier
                     .size(44.dp)
+                    .shadow(
+                        elevation = 12.dp,
+                        shape = CircleShape,
+                        spotColor = BrandRed,
+                        ambientColor = BrandRed
+                    )
                     .clip(CircleShape)
-                    .background(BrandRed.copy(alpha = 0.15f)),
+                    .background(BrandRed.copy(alpha = 0.2f)),
                 contentAlignment = Alignment.Center
             ) {
                 Icon(
@@ -682,7 +757,7 @@ private fun RouteInfoCard(routeNodes: List<MapNode>) {
                 Text(
                     text = "Информация о маршруте",
                     color = Color.White,
-                    fontFamily = Oswald,
+                    fontFamily = MapOswald,
                     fontWeight = FontWeight.SemiBold,
                     fontSize = 15.sp
                 )
@@ -695,13 +770,13 @@ private fun RouteInfoCard(routeNodes: List<MapNode>) {
                         Text(
                             text = "Этажей",
                             color = BrandLightGray,
-                            fontFamily = Manrope,
+                            fontFamily = MapManrope,
                             fontSize = 11.sp
                         )
                         Text(
                             text = "${floorsTraversed.size}",
                             color = Color.White,
-                            fontFamily = Manrope,
+                            fontFamily = MapManrope,
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp
                         )
@@ -711,13 +786,13 @@ private fun RouteInfoCard(routeNodes: List<MapNode>) {
                         Text(
                             text = "Примерное время",
                             color = BrandLightGray,
-                            fontFamily = Manrope,
+                            fontFamily = MapManrope,
                             fontSize = 11.sp
                         )
                         Text(
                             text = "≈ $timeText",
                             color = Color.White,
-                            fontFamily = Manrope,
+                            fontFamily = MapManrope,
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp
                         )
