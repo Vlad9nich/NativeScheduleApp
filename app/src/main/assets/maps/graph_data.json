@@ -1,0 +1,17 @@
+{
+  "floorMaps": {
+    "0": "floor_0.jpg",
+    "1": "floor_1.jpg"
+  },
+  "nodes": [
+    {
+      "id": "r_16_F1",
+      "name": "Room 16",
+      "floor": 1,
+      "x": 1304.0,
+      "y": 637.0,
+      "type": "room"
+    }
+  ],
+  "edges": []
+}
