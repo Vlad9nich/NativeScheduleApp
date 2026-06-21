@@ -134,6 +134,7 @@ class MapActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         val targetRoom = intent.getStringExtra("TARGET_ROOM") ?: "Неизвестно"
+        val startRoom = intent.getStringExtra("START_ROOM")
 
         setContent {
             MaterialTheme(
@@ -175,6 +176,7 @@ class MapActivity : ComponentActivity() {
                 ) {
                     MapNavigationScreen(
                         targetRoom = targetRoom,
+                        startRoom = startRoom,
                         loadGraphData = {
                             val reader = InputStreamReader(assets.open("maps/graph_data.json"))
                             Gson().fromJson(reader, GraphData::class.java).also { reader.close() }
@@ -207,6 +209,7 @@ private val FLOOR_LABELS = mapOf(
 @Composable
 fun MapNavigationScreen(
     targetRoom: String,
+    startRoom: String?,
     loadGraphData: () -> GraphData,
     loadFloorBitmap: (String) -> android.graphics.Bitmap,
     onBack: () -> Unit
@@ -231,7 +234,7 @@ fun MapNavigationScreen(
                 val builtGraph = Graph(data.nodes, data.edges)
                 graph = builtGraph
 
-                // Find matching room node by id or name
+                // Find matching target room node by id or name
                 val roomNodeId = data.nodes.firstOrNull { node ->
                     node.id.equals(targetRoom, ignoreCase = true)
                 }?.id ?: data.nodes.firstOrNull { node ->
@@ -242,8 +245,21 @@ fun MapNavigationScreen(
                     node.id.contains(targetRoom, ignoreCase = true) && node.type == "room"
                 }?.id
 
-                if (roomNodeId != null) {
-                    val path = findShortestPath("entrance_F1", roomNodeId, builtGraph)
+                // Find matching start room node by id or name
+                val startNodeId = if (startRoom.isNullOrBlank()) "entrance_F1" else {
+                    data.nodes.firstOrNull { node ->
+                        node.id.equals(startRoom, ignoreCase = true)
+                    }?.id ?: data.nodes.firstOrNull { node ->
+                        node.name.equals(startRoom, ignoreCase = true)
+                    }?.id ?: data.nodes.firstOrNull { node ->
+                        node.name.equals("Room $startRoom", ignoreCase = true)
+                    }?.id ?: data.nodes.firstOrNull { node ->
+                        node.id.contains(startRoom, ignoreCase = true) && node.type == "room"
+                    }?.id ?: "entrance_F1"
+                }
+
+                if (roomNodeId != null && startNodeId != null) {
+                    val path = findShortestPath(startNodeId, roomNodeId, builtGraph)
                     routeNodes = path
                     // Auto-select target room's floor
                     val targetNode = data.nodes.find { it.id == roomNodeId }

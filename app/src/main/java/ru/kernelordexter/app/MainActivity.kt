@@ -201,7 +201,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@OptIn(ExperimentalFoundationApi::class)
+@OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class)
 @Composable
 fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: PreferencesManager) {
     var activeGroup by remember { mutableStateOf(prefs.activeGroup) }
@@ -493,23 +493,44 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                         }
                         
                         if (mapDialogTarget != null) {
+                            var startRoomInput by remember { mutableStateOf("") }
                             AlertDialog(
                                 onDismissRequest = { mapDialogTarget = null },
-                                title = { Text("Навигация", color = Color.White, fontFamily = Oswald) },
-                                text = { Text("Хотите построить маршрут или посмотреть на карте здания кабинет ${mapDialogTarget?.room}?", color = BrandLightGray, fontFamily = Manrope) },
+                                title = { Text("Построить маршрут", color = Color.White, fontFamily = Oswald) },
+                                text = { 
+                                    Column {
+                                        Text("Кабинет: ${mapDialogTarget?.room}", color = BrandLightGray, fontFamily = Manrope)
+                                        Spacer(modifier = Modifier.height(16.dp))
+                                        OutlinedTextField(
+                                            value = startRoomInput,
+                                            onValueChange = { startRoomInput = it },
+                                            label = { Text("Где вы сейчас?", color = BrandLightGray, fontFamily = Manrope) },
+                                            placeholder = { Text("Например: 205 (или оставьте пустым для входа)", color = BrandLightGray, fontSize = 12.sp) },
+                                            colors = TextFieldDefaults.outlinedTextFieldColors(
+                                                textColor = Color.White,
+                                                unfocusedBorderColor = GlassBorder,
+                                                focusedBorderColor = BrandRed,
+                                                containerColor = GlassBackground
+                                            ),
+                                            singleLine = true,
+                                            modifier = Modifier.fillMaxWidth()
+                                        )
+                                    }
+                                },
                                 confirmButton = {
                                     Button(
                                         onClick = {
                                             val context = prefs.context
                                             val intent = Intent(context, MapActivity::class.java).apply {
                                                 putExtra("TARGET_ROOM", mapDialogTarget?.room)
+                                                putExtra("START_ROOM", startRoomInput.trim().takeIf { it.isNotEmpty() })
                                             }
                                             context.startActivity(intent)
                                             mapDialogTarget = null
                                         },
                                         colors = ButtonDefaults.buttonColors(containerColor = BrandRed),
                                         modifier = Modifier.shadow(8.dp, RoundedCornerShape(24.dp), spotColor = BrandRed, ambientColor = BrandRed)
-                                    ) { Text("Открыть карту", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
+                                    ) { Text("Построить", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
                                 },
                                 dismissButton = {
                                     TextButton(onClick = { mapDialogTarget = null }) { Text("Отмена", color = BrandLightGray, fontFamily = Manrope) }
