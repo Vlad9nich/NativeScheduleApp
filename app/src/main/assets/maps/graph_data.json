@@ -3,7 +3,8 @@
     "0": "floor_0.jpg",
     "1": "floor_1.jpg",
     "2": "floor_2.jpg",
-    "3": "floor_3.jpg"
+    "3": "floor_3.jpg",
+    "4": "floor_4.jpg"
   },
   "nodes": [
     {
@@ -653,6 +654,190 @@
       "x": 1000.0,
       "y": 1150.0,
       "type": "stairs"
+    },
+    {
+      "id": "r_401_F4",
+      "name": "Room 401",
+      "floor": 4,
+      "x": 850.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_402_F4",
+      "name": "Room 402",
+      "floor": 4,
+      "x": 950.0,
+      "y": 1100.0,
+      "type": "room"
+    },
+    {
+      "id": "r_404_F4",
+      "name": "Room 404",
+      "floor": 4,
+      "x": 950.0,
+      "y": 1000.0,
+      "type": "room"
+    },
+    {
+      "id": "r_403_F4",
+      "name": "Room 403",
+      "floor": 4,
+      "x": 850.0,
+      "y": 1000.0,
+      "type": "room"
+    },
+    {
+      "id": "r_411_F4",
+      "name": "Room 411",
+      "floor": 4,
+      "x": 850.0,
+      "y": 850.0,
+      "type": "room"
+    },
+    {
+      "id": "r_413_F4",
+      "name": "Room 413",
+      "floor": 4,
+      "x": 850.0,
+      "y": 800.0,
+      "type": "room"
+    },
+    {
+      "id": "r_409_F4",
+      "name": "Room 409",
+      "floor": 4,
+      "x": 850.0,
+      "y": 700.0,
+      "type": "room"
+    },
+    {
+      "id": "r_414_F4",
+      "name": "Room 414",
+      "floor": 4,
+      "x": 750.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_416_F4",
+      "name": "Room 416",
+      "floor": 4,
+      "x": 650.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_418_F4",
+      "name": "Room 418",
+      "floor": 4,
+      "x": 550.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_420_F4",
+      "name": "Room 420",
+      "floor": 4,
+      "x": 450.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_424_F4",
+      "name": "Room 424",
+      "floor": 4,
+      "x": 350.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_430_F4",
+      "name": "Room 430",
+      "floor": 4,
+      "x": 250.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_432_F4",
+      "name": "Room 432",
+      "floor": 4,
+      "x": 150.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_436_F4",
+      "name": "Room 436",
+      "floor": 4,
+      "x": 50.0,
+      "y": 500.0,
+      "type": "room"
+    },
+    {
+      "id": "r_415_F4",
+      "name": "Room 415",
+      "floor": 4,
+      "x": 750.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_417_F4",
+      "name": "Room 417",
+      "floor": 4,
+      "x": 650.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_419_F4",
+      "name": "Room 419",
+      "floor": 4,
+      "x": 550.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_421_F4",
+      "name": "Room 421",
+      "floor": 4,
+      "x": 450.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_423_F4",
+      "name": "Room 423",
+      "floor": 4,
+      "x": 350.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_431_F4",
+      "name": "Room 431",
+      "floor": 4,
+      "x": 150.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "r_435_F4",
+      "name": "Room 435",
+      "floor": 4,
+      "x": 50.0,
+      "y": 600.0,
+      "type": "room"
+    },
+    {
+      "id": "stair_main_F4",
+      "name": "Главная лестница",
+      "floor": 4,
+      "x": 850.0,
+      "y": 750.0,
+      "type": "stairs"
     }
   ],
   "edges": [
@@ -677,6 +862,18 @@
     {
       "fromId": "stair_main_F3",
       "toId": "stair_main_F2",
+      "weight": 150.0,
+      "type": "stairs"
+    },
+    {
+      "fromId": "stair_main_F3",
+      "toId": "stair_main_F4",
+      "weight": 150.0,
+      "type": "stairs"
+    },
+    {
+      "fromId": "stair_main_F4",
+      "toId": "stair_main_F3",
       "weight": 150.0,
       "type": "stairs"
     }
