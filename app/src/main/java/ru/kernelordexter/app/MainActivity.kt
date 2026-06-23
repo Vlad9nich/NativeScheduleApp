@@ -25,6 +25,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -302,7 +303,7 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                         .background(BrandRed, RoundedCornerShape(12.dp)),
                     contentAlignment = Alignment.Center
                 ) {
-                    Text("K", color = Color.White, fontWeight = FontWeight.Bold, fontSize = 24.sp, fontFamily = Oswald)
+                    Icon(Icons.Filled.DateRange, contentDescription = "Schedule Logo", tint = Color.White, modifier = Modifier.size(28.dp))
                 }
                 Spacer(modifier = Modifier.width(16.dp))
                 Text(
@@ -485,59 +486,10 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
             } else {
                 LazyColumn(modifier = Modifier.fillMaxSize()) {
                     items(activeDayItems, key = { it.id }) { classItem ->
-                        var mapDialogTarget by remember { mutableStateOf<ClassInfo?>(null) }
                         var visible by remember { mutableStateOf(false) }
                         
                         LaunchedEffect(classItem.id) {
                             visible = true
-                        }
-                        
-                        if (mapDialogTarget != null) {
-                            var startRoomInput by remember { mutableStateOf("") }
-                            AlertDialog(
-                                onDismissRequest = { mapDialogTarget = null },
-                                title = { Text("Построить маршрут", color = Color.White, fontFamily = Oswald) },
-                                text = { 
-                                    Column {
-                                        Text("Кабинет: ${mapDialogTarget?.room}", color = BrandLightGray, fontFamily = Manrope)
-                                        Spacer(modifier = Modifier.height(16.dp))
-                                        OutlinedTextField(
-                                            value = startRoomInput,
-                                            onValueChange = { startRoomInput = it },
-                                            label = { Text("Где вы сейчас?", color = BrandLightGray, fontFamily = Manrope) },
-                                            placeholder = { Text("Например: 205 (или оставьте пустым для входа)", color = BrandLightGray, fontSize = 12.sp) },
-                                            colors = TextFieldDefaults.outlinedTextFieldColors(
-                                                textColor = Color.White,
-                                                unfocusedBorderColor = GlassBorder,
-                                                focusedBorderColor = BrandRed,
-                                                containerColor = GlassBackground
-                                            ),
-                                            singleLine = true,
-                                            modifier = Modifier.fillMaxWidth()
-                                        )
-                                    }
-                                },
-                                confirmButton = {
-                                    Button(
-                                        onClick = {
-                                            val context = prefs.context
-                                            val intent = Intent(context, MapActivity::class.java).apply {
-                                                putExtra("TARGET_ROOM", mapDialogTarget?.room)
-                                                putExtra("START_ROOM", startRoomInput.trim().takeIf { it.isNotEmpty() })
-                                            }
-                                            context.startActivity(intent)
-                                            mapDialogTarget = null
-                                        },
-                                        colors = ButtonDefaults.buttonColors(containerColor = BrandRed),
-                                        modifier = Modifier.shadow(8.dp, RoundedCornerShape(24.dp), spotColor = BrandRed, ambientColor = BrandRed)
-                                    ) { Text("Построить", color = Color.White, fontFamily = Manrope, fontWeight = FontWeight.Bold) }
-                                },
-                                dismissButton = {
-                                    TextButton(onClick = { mapDialogTarget = null }) { Text("Отмена", color = BrandLightGray, fontFamily = Manrope) }
-                                },
-                                containerColor = BrandDarkGray,
-                                shape = RoundedCornerShape(16.dp)
-                            )
                         }
 
                         AnimatedVisibility(
@@ -552,8 +504,6 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                                         editingClass = classItem
                                         editTargetDay = pageDayKey
                                         showEditModal = true
-                                    } else {
-                                        mapDialogTarget = classItem
                                     }
                                 }
                             )
