@@ -8,1945 +8,4099 @@
   },
   "nodes": [
     {
-      "id": "stairs_L_F1",
-      "name": "Лестница",
-      "floor": 1,
-      "x": 300,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_M_F1",
-      "name": "Лестница",
-      "floor": 1,
-      "x": 700.0,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_R_F1",
-      "name": "Лестница",
-      "floor": 1,
-      "x": 1100,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "entrance_F1",
-      "name": "Вход",
-      "floor": 1,
-      "x": 700.0,
-      "y": 700,
-      "type": "staircase"
-    },
-    {
-      "id": "room_101",
-      "name": "101",
-      "floor": 1,
-      "x": 350,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_101",
+      "id": "corr_m_400_1",
       "name": "",
       "floor": 1,
-      "x": 350,
-      "y": 500,
+      "x": 400,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_111",
-      "name": "111",
-      "floor": 1,
-      "x": 350,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_111",
-      "name": "",
-      "floor": 1,
-      "x": 350,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_102",
-      "name": "102",
-      "floor": 1,
-      "x": 500,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_102",
+      "id": "corr_m_500_1",
       "name": "",
       "floor": 1,
       "x": 500,
-      "y": 500,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_112",
-      "name": "112",
-      "floor": 1,
-      "x": 500,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_112",
+      "id": "corr_m_600_1",
       "name": "",
       "floor": 1,
-      "x": 500,
-      "y": 500,
+      "x": 600,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_103",
-      "name": "103",
-      "floor": 1,
-      "x": 650,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_103",
+      "id": "corr_m_700_1",
       "name": "",
       "floor": 1,
-      "x": 650,
-      "y": 500,
+      "x": 700,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_113",
-      "name": "113",
-      "floor": 1,
-      "x": 650,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_113",
-      "name": "",
-      "floor": 1,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_104",
-      "name": "104",
-      "floor": 1,
-      "x": 800,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_104",
+      "id": "corr_m_800_1",
       "name": "",
       "floor": 1,
       "x": 800,
-      "y": 500,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_114",
-      "name": "114",
-      "floor": 1,
-      "x": 800,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_114",
+      "id": "corr_m_900_1",
       "name": "",
       "floor": 1,
-      "x": 800,
-      "y": 500,
+      "x": 900,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_105",
-      "name": "105",
-      "floor": 1,
-      "x": 950,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_105",
+      "id": "corr_m_1000_1",
       "name": "",
       "floor": 1,
-      "x": 950,
-      "y": 500,
+      "x": 1000,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_115",
-      "name": "115",
-      "floor": 1,
-      "x": 950,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_115",
-      "name": "",
-      "floor": 1,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_106",
-      "name": "106",
-      "floor": 1,
-      "x": 1100,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_106",
+      "id": "corr_m_1100_1",
       "name": "",
       "floor": 1,
       "x": 1100,
-      "y": 500,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_116",
+      "id": "corr_m_1200_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1300_1",
+      "name": "",
+      "floor": 1,
+      "x": 1300,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1400_1",
+      "name": "",
+      "floor": 1,
+      "x": 1400,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1500_1",
+      "name": "",
+      "floor": 1,
+      "x": 1500,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1600_1",
+      "name": "",
+      "floor": 1,
+      "x": 1600,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1700_1",
+      "name": "",
+      "floor": 1,
+      "x": 1700,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_140_1",
+      "name": "140",
+      "floor": 1,
+      "x": 450,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_450_1",
+      "name": "",
+      "floor": 1,
+      "x": 450,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_Деканат_1",
+      "name": "Деканат",
+      "floor": 1,
+      "x": 550,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_550_1",
+      "name": "",
+      "floor": 1,
+      "x": 550,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_136_1",
+      "name": "136",
+      "floor": 1,
+      "x": 650,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_650_1",
+      "name": "",
+      "floor": 1,
+      "x": 650,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_134_1",
+      "name": "134",
+      "floor": 1,
+      "x": 750,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_750_1",
+      "name": "",
+      "floor": 1,
+      "x": 750,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_132_1",
+      "name": "132",
+      "floor": 1,
+      "x": 850,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_850_1",
+      "name": "",
+      "floor": 1,
+      "x": 850,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_120_1",
+      "name": "120",
+      "floor": 1,
+      "x": 950,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_950_1",
+      "name": "",
+      "floor": 1,
+      "x": 950,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_118_1",
+      "name": "118",
+      "floor": 1,
+      "x": 1050,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1050_1",
+      "name": "",
+      "floor": 1,
+      "x": 1050,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_116_1",
       "name": "116",
       "floor": 1,
-      "x": 1100,
-      "y": 650,
+      "x": 1150,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_116",
+      "id": "corr_m_1150_1",
       "name": "",
       "floor": 1,
-      "x": 1100,
-      "y": 500,
+      "x": 1150,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_107",
-      "name": "107",
+      "id": "room_114_1",
+      "name": "114",
       "floor": 1,
       "x": 1250,
-      "y": 350,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_107",
+      "id": "corr_m_1250_1",
       "name": "",
       "floor": 1,
       "x": 1250,
-      "y": 500,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_117",
+      "id": "room_112_1",
+      "name": "112",
+      "floor": 1,
+      "x": 1350,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1350_1",
+      "name": "",
+      "floor": 1,
+      "x": 1350,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_106_1",
+      "name": "106",
+      "floor": 1,
+      "x": 1450,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1450_1",
+      "name": "",
+      "floor": 1,
+      "x": 1450,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_104_1",
+      "name": "104",
+      "floor": 1,
+      "x": 1550,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1550_1",
+      "name": "",
+      "floor": 1,
+      "x": 1550,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_102_1",
+      "name": "102",
+      "floor": 1,
+      "x": 1650,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1650_1",
+      "name": "",
+      "floor": 1,
+      "x": 1650,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_100_1",
+      "name": "100",
+      "floor": 1,
+      "x": 1750,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1750_1",
+      "name": "",
+      "floor": 1,
+      "x": 1750,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_151_1",
+      "name": "151",
+      "floor": 1,
+      "x": 450,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_147_1",
+      "name": "147",
+      "floor": 1,
+      "x": 530,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_530_1",
+      "name": "",
+      "floor": 1,
+      "x": 530,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_145_1",
+      "name": "145",
+      "floor": 1,
+      "x": 610,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_610_1",
+      "name": "",
+      "floor": 1,
+      "x": 610,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_143_1",
+      "name": "143",
+      "floor": 1,
+      "x": 690,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_690_1",
+      "name": "",
+      "floor": 1,
+      "x": 690,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_141_1",
+      "name": "141",
+      "floor": 1,
+      "x": 770,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_770_1",
+      "name": "",
+      "floor": 1,
+      "x": 770,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_139_1",
+      "name": "139",
+      "floor": 1,
+      "x": 850,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_137_1",
+      "name": "137",
+      "floor": 1,
+      "x": 930,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_930_1",
+      "name": "",
+      "floor": 1,
+      "x": 930,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_125_1",
+      "name": "125",
+      "floor": 1,
+      "x": 1010,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1010_1",
+      "name": "",
+      "floor": 1,
+      "x": 1010,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_121_1",
+      "name": "121",
+      "floor": 1,
+      "x": 1090,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1090_1",
+      "name": "",
+      "floor": 1,
+      "x": 1090,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_119_1",
+      "name": "119",
+      "floor": 1,
+      "x": 1170,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1170_1",
+      "name": "",
+      "floor": 1,
+      "x": 1170,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_117_1",
       "name": "117",
       "floor": 1,
       "x": 1250,
-      "y": 650,
+      "y": 880,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_117",
+      "id": "room_115_1",
+      "name": "115",
+      "floor": 1,
+      "x": 1330,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1330_1",
       "name": "",
       "floor": 1,
-      "x": 1250,
+      "x": 1330,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_113_1",
+      "name": "113",
+      "floor": 1,
+      "x": 1410,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1410_1",
+      "name": "",
+      "floor": 1,
+      "x": 1410,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_111_1",
+      "name": "111",
+      "floor": 1,
+      "x": 1490,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1490_1",
+      "name": "",
+      "floor": 1,
+      "x": 1490,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_109_1",
+      "name": "109",
+      "floor": 1,
+      "x": 1570,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1570_1",
+      "name": "",
+      "floor": 1,
+      "x": 1570,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_107_1",
+      "name": "107",
+      "floor": 1,
+      "x": 1650,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_105_1",
+      "name": "105",
+      "floor": 1,
+      "x": 1730,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1730_1",
+      "name": "",
+      "floor": 1,
+      "x": 1730,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_800_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_900_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 900,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_1000_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1000,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_1100_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1100,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_1200_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_1300_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1300,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v800_1400_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_031_1",
+      "name": "031",
+      "floor": 1,
+      "x": 720,
+      "y": 900,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_029_1",
+      "name": "029",
+      "floor": 1,
+      "x": 720,
+      "y": 1000,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_027_1",
+      "name": "027",
+      "floor": 1,
+      "x": 720,
+      "y": 1100,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_025_1",
+      "name": "025",
+      "floor": 1,
+      "x": 720,
+      "y": 1200,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_022_1",
+      "name": "022",
+      "floor": 1,
+      "x": 880,
+      "y": 900,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_020_1",
+      "name": "020",
+      "floor": 1,
+      "x": 880,
+      "y": 1000,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_018_1",
+      "name": "018",
+      "floor": 1,
+      "x": 880,
+      "y": 1100,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_016_1",
+      "name": "016",
+      "floor": 1,
+      "x": 880,
+      "y": 1200,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_200_1",
+      "name": "",
+      "floor": 1,
+      "x": 200,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_300_1",
+      "name": "",
+      "floor": 1,
+      "x": 300,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_400_1",
+      "name": "",
+      "floor": 1,
+      "x": 400,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_500_1",
+      "name": "",
+      "floor": 1,
+      "x": 500,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_600_1",
+      "name": "",
+      "floor": 1,
+      "x": 600,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_700_1",
+      "name": "",
+      "floor": 1,
+      "x": 700,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_800_1",
+      "name": "",
+      "floor": 1,
+      "x": 800,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_900_1",
+      "name": "",
+      "floor": 1,
+      "x": 900,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_1000_1",
+      "name": "",
+      "floor": 1,
+      "x": 1000,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_1100_1",
+      "name": "",
+      "floor": 1,
+      "x": 1100,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_1200_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_1300_1",
+      "name": "",
+      "floor": 1,
+      "x": 1300,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_b_1400_1",
+      "name": "",
+      "floor": 1,
+      "x": 1400,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_028_1",
+      "name": "028",
+      "floor": 1,
+      "x": 300,
+      "y": 1320,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_010_1",
+      "name": "010",
+      "floor": 1,
+      "x": 500,
+      "y": 1320,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_012_1",
+      "name": "012",
+      "floor": 1,
+      "x": 700,
+      "y": 1320,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_014_1",
+      "name": "014",
+      "floor": 1,
+      "x": 900,
+      "y": 1320,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_01_1",
+      "name": "01",
+      "floor": 1,
+      "x": 300,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_03_1",
+      "name": "03",
+      "floor": 1,
+      "x": 420,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_420_1",
+      "name": "",
+      "floor": 1,
+      "x": 420,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_05_1",
+      "name": "05",
+      "floor": 1,
+      "x": 540,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_540_1",
+      "name": "",
+      "floor": 1,
+      "x": 540,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_07_1",
+      "name": "07",
+      "floor": 1,
+      "x": 660,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_660_1",
+      "name": "",
+      "floor": 1,
+      "x": 660,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_09_1",
+      "name": "09",
+      "floor": 1,
+      "x": 780,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_780_1",
+      "name": "",
+      "floor": 1,
+      "x": 780,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_013_1",
+      "name": "013",
+      "floor": 1,
+      "x": 900,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_015_1",
+      "name": "015",
+      "floor": 1,
+      "x": 1020,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_1020_1",
+      "name": "",
+      "floor": 1,
+      "x": 1020,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_017_1",
+      "name": "017",
+      "floor": 1,
+      "x": 1140,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_1140_1",
+      "name": "",
+      "floor": 1,
+      "x": 1140,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_019_1",
+      "name": "019",
+      "floor": 1,
+      "x": 1260,
+      "y": 1480,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_b_1260_1",
+      "name": "",
+      "floor": 1,
+      "x": 1260,
+      "y": 1400,
+      "type": "corridor"
+    },
+    {
+      "id": "room_Библиотека_1",
+      "name": "Библиотека",
+      "floor": 1,
+      "x": 1200,
+      "y": 400,
+      "type": "room",
+      "width": 200,
+      "height": 80
+    },
+    {
+      "id": "room_Читальный зал_1",
+      "name": "Читальный зал",
+      "floor": 1,
+      "x": 1200,
+      "y": 200,
+      "type": "room",
+      "width": 300,
+      "height": 150
+    },
+    {
+      "id": "corr_v1200_200_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1200_300_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 300,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1200_400_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1200_500_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
       "y": 500,
       "type": "corridor"
     },
     {
-      "id": "stairs_L_F2",
+      "id": "corr_v1200_600_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1200_700_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 700,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1200_800_1",
+      "name": "",
+      "floor": 1,
+      "x": 1200,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "stairs_M_1",
       "name": "Лестница",
+      "floor": 1,
+      "x": 800,
+      "y": 800,
+      "type": "staircase"
+    },
+    {
+      "id": "stairs_R_1",
+      "name": "Лестница",
+      "floor": 1,
+      "x": 1400,
+      "y": 800,
+      "type": "staircase"
+    },
+    {
+      "id": "corr_m_200_2",
+      "name": "",
+      "floor": 2,
+      "x": 200,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_300_2",
+      "name": "",
       "floor": 2,
       "x": 300,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_M_F2",
-      "name": "Лестница",
-      "floor": 2,
-      "x": 700.0,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_R_F2",
-      "name": "Лестница",
-      "floor": 2,
-      "x": 1100,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "room_201",
-      "name": "201",
-      "floor": 2,
-      "x": 350,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_201",
-      "name": "",
-      "floor": 2,
-      "x": 350,
-      "y": 500,
+      "y": 1200,
       "type": "corridor"
     },
     {
-      "id": "room_211",
-      "name": "211",
-      "floor": 2,
-      "x": 350,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_211",
+      "id": "corr_m_400_2",
       "name": "",
       "floor": 2,
-      "x": 350,
-      "y": 500,
+      "x": 400,
+      "y": 1200,
       "type": "corridor"
     },
     {
-      "id": "room_202",
-      "name": "202",
-      "floor": 2,
-      "x": 500,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_202",
+      "id": "corr_m_500_2",
       "name": "",
       "floor": 2,
       "x": 500,
-      "y": 500,
+      "y": 1200,
       "type": "corridor"
     },
     {
-      "id": "room_212",
-      "name": "212",
+      "id": "corr_m_600_2",
+      "name": "",
+      "floor": 2,
+      "x": 600,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_700_2",
+      "name": "",
+      "floor": 2,
+      "x": 700,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_800_2",
+      "name": "",
+      "floor": 2,
+      "x": 800,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_900_2",
+      "name": "",
+      "floor": 2,
+      "x": 900,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1000_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1100_2",
+      "name": "",
+      "floor": 2,
+      "x": 1100,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1200_2",
+      "name": "",
+      "floor": 2,
+      "x": 1200,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1300_2",
+      "name": "",
+      "floor": 2,
+      "x": 1300,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "room_232_2",
+      "name": "232",
+      "floor": 2,
+      "x": 300,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_230_2",
+      "name": "230",
+      "floor": 2,
+      "x": 400,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_228_2",
+      "name": "228",
       "floor": 2,
       "x": 500,
-      "y": 650,
+      "y": 1120,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_212",
-      "name": "",
+      "id": "room_226_2",
+      "name": "226",
+      "floor": 2,
+      "x": 600,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_224_2",
+      "name": "224",
+      "floor": 2,
+      "x": 700,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_222_2",
+      "name": "222",
+      "floor": 2,
+      "x": 800,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_220_2",
+      "name": "220",
+      "floor": 2,
+      "x": 900,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_218_2",
+      "name": "218",
+      "floor": 2,
+      "x": 1000,
+      "y": 1120,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_231_2",
+      "name": "231",
+      "floor": 2,
+      "x": 300,
+      "y": 1280,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_229_2",
+      "name": "229",
+      "floor": 2,
+      "x": 400,
+      "y": 1280,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_227_2",
+      "name": "227",
       "floor": 2,
       "x": 500,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_203",
-      "name": "203",
-      "floor": 2,
-      "x": 650,
-      "y": 350,
+      "y": 1280,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_203",
-      "name": "",
+      "id": "room_225_2",
+      "name": "225",
       "floor": 2,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_213",
-      "name": "213",
-      "floor": 2,
-      "x": 650,
-      "y": 650,
+      "x": 600,
+      "y": 1280,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_213",
-      "name": "",
+      "id": "room_223_2",
+      "name": "223",
       "floor": 2,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
+      "x": 700,
+      "y": 1280,
+      "type": "room",
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "room_204",
-      "name": "204",
+      "id": "room_221_2",
+      "name": "221",
       "floor": 2,
       "x": 800,
-      "y": 350,
+      "y": 1280,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_204",
-      "name": "",
+      "id": "room_219_2",
+      "name": "219",
       "floor": 2,
-      "x": 800,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_214",
-      "name": "214",
-      "floor": 2,
-      "x": 800,
-      "y": 650,
+      "x": 900,
+      "y": 1280,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_214",
-      "name": "",
-      "floor": 2,
-      "x": 800,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_205",
-      "name": "205",
-      "floor": 2,
-      "x": 950,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_205",
-      "name": "",
-      "floor": 2,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_215",
-      "name": "215",
-      "floor": 2,
-      "x": 950,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_215",
-      "name": "",
-      "floor": 2,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_206",
-      "name": "206",
-      "floor": 2,
-      "x": 1100,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_206",
-      "name": "",
-      "floor": 2,
-      "x": 1100,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_216",
-      "name": "216",
-      "floor": 2,
-      "x": 1100,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_216",
-      "name": "",
-      "floor": 2,
-      "x": 1100,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_207",
-      "name": "207",
-      "floor": 2,
-      "x": 1250,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_207",
-      "name": "",
-      "floor": 2,
-      "x": 1250,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_217",
+      "id": "room_217_2",
       "name": "217",
       "floor": 2,
-      "x": 1250,
-      "y": 650,
+      "x": 1000,
+      "y": 1280,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_217",
+      "id": "room_215_2",
+      "name": "215",
+      "floor": 2,
+      "x": 1100,
+      "y": 1280,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_213_2",
+      "name": "213",
+      "floor": 2,
+      "x": 1200,
+      "y": 1280,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_Спортзал_2",
+      "name": "Спортзал",
+      "floor": 2,
+      "x": 1000,
+      "y": 700,
+      "type": "room",
+      "width": 400,
+      "height": 150
+    },
+    {
+      "id": "room_Актовый зал_2",
+      "name": "Актовый зал",
+      "floor": 2,
+      "x": 1000,
+      "y": 400,
+      "type": "room",
+      "width": 400,
+      "height": 200
+    },
+    {
+      "id": "corr_v1000_400_2",
       "name": "",
       "floor": 2,
-      "x": 1250,
+      "x": 1000,
+      "y": 400,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_500_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
       "y": 500,
       "type": "corridor"
     },
     {
-      "id": "stairs_L_F3",
+      "id": "corr_v1000_600_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_700_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 700,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_800_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_900_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 900,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_1000_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 1000,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_1100_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 1100,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_v1000_1200_2",
+      "name": "",
+      "floor": 2,
+      "x": 1000,
+      "y": 1200,
+      "type": "corridor"
+    },
+    {
+      "id": "stairs_M_2",
       "name": "Лестница",
+      "floor": 2,
+      "x": 800,
+      "y": 1200,
+      "type": "staircase"
+    },
+    {
+      "id": "stairs_R_2",
+      "name": "Лестница",
+      "floor": 2,
+      "x": 1000,
+      "y": 1200,
+      "type": "staircase"
+    },
+    {
+      "id": "corr_m_200_3",
+      "name": "",
+      "floor": 3,
+      "x": 200,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_300_3",
+      "name": "",
       "floor": 3,
       "x": 300,
-      "y": 500,
-      "type": "staircase"
+      "y": 800,
+      "type": "corridor"
     },
     {
-      "id": "stairs_M_F3",
-      "name": "Лестница",
+      "id": "corr_m_400_3",
+      "name": "",
       "floor": 3,
-      "x": 700.0,
-      "y": 500,
-      "type": "staircase"
+      "x": 400,
+      "y": 800,
+      "type": "corridor"
     },
     {
-      "id": "stairs_R_F3",
-      "name": "Лестница",
+      "id": "corr_m_500_3",
+      "name": "",
+      "floor": 3,
+      "x": 500,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_600_3",
+      "name": "",
+      "floor": 3,
+      "x": 600,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_700_3",
+      "name": "",
+      "floor": 3,
+      "x": 700,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_800_3",
+      "name": "",
+      "floor": 3,
+      "x": 800,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_900_3",
+      "name": "",
+      "floor": 3,
+      "x": 900,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1000_3",
+      "name": "",
+      "floor": 3,
+      "x": 1000,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1100_3",
+      "name": "",
       "floor": 3,
       "x": 1100,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "room_301",
-      "name": "301",
-      "floor": 3,
-      "x": 350,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_301",
-      "name": "",
-      "floor": 3,
-      "x": 350,
-      "y": 500,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_311",
-      "name": "311",
-      "floor": 3,
-      "x": 350,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_311",
+      "id": "corr_m_1200_3",
       "name": "",
       "floor": 3,
-      "x": 350,
-      "y": 500,
+      "x": 1200,
+      "y": 800,
       "type": "corridor"
     },
     {
-      "id": "room_302",
-      "name": "302",
+      "id": "corr_m_1300_3",
+      "name": "",
+      "floor": 3,
+      "x": 1300,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1400_3",
+      "name": "",
+      "floor": 3,
+      "x": 1400,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1500_3",
+      "name": "",
+      "floor": 3,
+      "x": 1500,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1600_3",
+      "name": "",
+      "floor": 3,
+      "x": 1600,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "corr_m_1700_3",
+      "name": "",
+      "floor": 3,
+      "x": 1700,
+      "y": 800,
+      "type": "corridor"
+    },
+    {
+      "id": "room_324_3",
+      "name": "324",
+      "floor": 3,
+      "x": 300,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_322_3",
+      "name": "322",
+      "floor": 3,
+      "x": 400,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_320_3",
+      "name": "320",
       "floor": 3,
       "x": 500,
-      "y": 350,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_302",
-      "name": "",
+      "id": "room_318_3",
+      "name": "318",
       "floor": 3,
-      "x": 500,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_312",
-      "name": "312",
-      "floor": 3,
-      "x": 500,
-      "y": 650,
+      "x": 600,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_312",
-      "name": "",
+      "id": "room_316_3",
+      "name": "316",
       "floor": 3,
-      "x": 500,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_303",
-      "name": "303",
-      "floor": 3,
-      "x": 650,
-      "y": 350,
+      "x": 700,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_303",
-      "name": "",
-      "floor": 3,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_313",
-      "name": "313",
-      "floor": 3,
-      "x": 650,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_313",
-      "name": "",
-      "floor": 3,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_304",
-      "name": "304",
-      "floor": 3,
-      "x": 800,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_304",
-      "name": "",
-      "floor": 3,
-      "x": 800,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_314",
+      "id": "room_314_3",
       "name": "314",
       "floor": 3,
       "x": 800,
-      "y": 650,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_314",
-      "name": "",
+      "id": "room_312_3",
+      "name": "312",
       "floor": 3,
-      "x": 800,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_305",
-      "name": "305",
-      "floor": 3,
-      "x": 950,
-      "y": 350,
+      "x": 900,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_305",
-      "name": "",
+      "id": "room_310_3",
+      "name": "310",
       "floor": 3,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_315",
-      "name": "315",
-      "floor": 3,
-      "x": 950,
-      "y": 650,
+      "x": 1000,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_315",
-      "name": "",
+      "id": "room_308_3",
+      "name": "308",
       "floor": 3,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
+      "x": 1100,
+      "y": 720,
+      "type": "room",
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "room_306",
+      "id": "room_306_3",
       "name": "306",
       "floor": 3,
-      "x": 1100,
-      "y": 350,
+      "x": 1200,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_306",
-      "name": "",
+      "id": "room_304_3",
+      "name": "304",
       "floor": 3,
-      "x": 1100,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_316",
-      "name": "316",
-      "floor": 3,
-      "x": 1100,
-      "y": 650,
+      "x": 1300,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_316",
-      "name": "",
+      "id": "room_302_3",
+      "name": "302",
       "floor": 3,
-      "x": 1100,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_307",
-      "name": "307",
-      "floor": 3,
-      "x": 1250,
-      "y": 350,
+      "x": 1400,
+      "y": 720,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_307",
-      "name": "",
+      "id": "room_325_3",
+      "name": "325",
       "floor": 3,
-      "x": 1250,
-      "y": 500,
-      "type": "corridor"
+      "x": 300,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "room_317",
+      "id": "room_323_3",
+      "name": "323",
+      "floor": 3,
+      "x": 400,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_321_3",
+      "name": "321",
+      "floor": 3,
+      "x": 500,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_319_3",
+      "name": "319",
+      "floor": 3,
+      "x": 600,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_317_3",
       "name": "317",
       "floor": 3,
-      "x": 1250,
-      "y": 650,
+      "x": 700,
+      "y": 880,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_317",
-      "name": "",
+      "id": "room_315_3",
+      "name": "315",
       "floor": 3,
-      "x": 1250,
-      "y": 500,
+      "x": 800,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_313_3",
+      "name": "313",
+      "floor": 3,
+      "x": 900,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_311_3",
+      "name": "311",
+      "floor": 3,
+      "x": 1000,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_309_3",
+      "name": "309",
+      "floor": 3,
+      "x": 1100,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_307_3",
+      "name": "307",
+      "floor": 3,
+      "x": 1200,
+      "y": 880,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "stairs_M_3",
+      "name": "Лестница",
+      "floor": 3,
+      "x": 800,
+      "y": 800,
+      "type": "staircase"
+    },
+    {
+      "id": "stairs_R_3",
+      "name": "Лестница",
+      "floor": 3,
+      "x": 1000,
+      "y": 800,
+      "type": "staircase"
+    },
+    {
+      "id": "corr_m_200_4",
+      "name": "",
+      "floor": 4,
+      "x": 200,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "stairs_L_F4",
-      "name": "Лестница",
+      "id": "corr_m_300_4",
+      "name": "",
       "floor": 4,
       "x": 300,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_M_F4",
-      "name": "Лестница",
-      "floor": 4,
-      "x": 700.0,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "stairs_R_F4",
-      "name": "Лестница",
-      "floor": 4,
-      "x": 1100,
-      "y": 500,
-      "type": "staircase"
-    },
-    {
-      "id": "room_401",
-      "name": "401",
-      "floor": 4,
-      "x": 350,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_401",
-      "name": "",
-      "floor": 4,
-      "x": 350,
-      "y": 500,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_411",
-      "name": "411",
-      "floor": 4,
-      "x": 350,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_411",
+      "id": "corr_m_400_4",
       "name": "",
       "floor": 4,
-      "x": 350,
-      "y": 500,
+      "x": 400,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_402",
-      "name": "402",
-      "floor": 4,
-      "x": 500,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_402",
+      "id": "corr_m_500_4",
       "name": "",
       "floor": 4,
       "x": 500,
-      "y": 500,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_412",
-      "name": "412",
-      "floor": 4,
-      "x": 500,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_412",
+      "id": "corr_m_600_4",
       "name": "",
       "floor": 4,
-      "x": 500,
-      "y": 500,
+      "x": 600,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_403",
-      "name": "403",
-      "floor": 4,
-      "x": 650,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_403",
+      "id": "corr_m_700_4",
       "name": "",
       "floor": 4,
-      "x": 650,
-      "y": 500,
+      "x": 700,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_413",
-      "name": "413",
-      "floor": 4,
-      "x": 650,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_413",
-      "name": "",
-      "floor": 4,
-      "x": 650,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_404",
-      "name": "404",
-      "floor": 4,
-      "x": 800,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_404",
+      "id": "corr_m_800_4",
       "name": "",
       "floor": 4,
       "x": 800,
-      "y": 500,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_414",
-      "name": "414",
-      "floor": 4,
-      "x": 800,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_414",
+      "id": "corr_m_900_4",
       "name": "",
       "floor": 4,
-      "x": 800,
-      "y": 500,
+      "x": 900,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_405",
-      "name": "405",
-      "floor": 4,
-      "x": 950,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_405",
+      "id": "corr_m_1000_4",
       "name": "",
       "floor": 4,
-      "x": 950,
-      "y": 500,
+      "x": 1000,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_415",
-      "name": "415",
-      "floor": 4,
-      "x": 950,
-      "y": 650,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_bot_415",
-      "name": "",
-      "floor": 4,
-      "x": 950,
-      "y": 500,
-      "type": "corridor"
-    },
-    {
-      "id": "room_406",
-      "name": "406",
-      "floor": 4,
-      "x": 1100,
-      "y": 350,
-      "type": "room",
-      "width": 100,
-      "height": 80
-    },
-    {
-      "id": "corr_top_406",
+      "id": "corr_m_1100_4",
       "name": "",
       "floor": 4,
       "x": 1100,
-      "y": 500,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_416",
+      "id": "room_436_4",
+      "name": "436",
+      "floor": 4,
+      "x": 200,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_434_4",
+      "name": "434",
+      "floor": 4,
+      "x": 280,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_280_4",
+      "name": "",
+      "floor": 4,
+      "x": 280,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_432_4",
+      "name": "432",
+      "floor": 4,
+      "x": 360,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_360_4",
+      "name": "",
+      "floor": 4,
+      "x": 360,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_430_4",
+      "name": "430",
+      "floor": 4,
+      "x": 440,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_440_4",
+      "name": "",
+      "floor": 4,
+      "x": 440,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_428_4",
+      "name": "428",
+      "floor": 4,
+      "x": 520,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_520_4",
+      "name": "",
+      "floor": 4,
+      "x": 520,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_426_4",
+      "name": "426",
+      "floor": 4,
+      "x": 600,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_424_4",
+      "name": "424",
+      "floor": 4,
+      "x": 680,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_680_4",
+      "name": "",
+      "floor": 4,
+      "x": 680,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_422_4",
+      "name": "422",
+      "floor": 4,
+      "x": 760,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_760_4",
+      "name": "",
+      "floor": 4,
+      "x": 760,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_420_4",
+      "name": "420",
+      "floor": 4,
+      "x": 840,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_840_4",
+      "name": "",
+      "floor": 4,
+      "x": 840,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_418_4",
+      "name": "418",
+      "floor": 4,
+      "x": 920,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_920_4",
+      "name": "",
+      "floor": 4,
+      "x": 920,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_416_4",
       "name": "416",
       "floor": 4,
-      "x": 1100,
-      "y": 650,
+      "x": 1000,
+      "y": 520,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_416",
+      "id": "room_414_4",
+      "name": "414",
+      "floor": 4,
+      "x": 1080,
+      "y": 520,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1080_4",
       "name": "",
       "floor": 4,
-      "x": 1100,
-      "y": 500,
+      "x": 1080,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_407",
-      "name": "407",
+      "id": "room_435_4",
+      "name": "435",
       "floor": 4,
-      "x": 1250,
-      "y": 350,
+      "x": 200,
+      "y": 680,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_top_407",
+      "id": "room_433_4",
+      "name": "433",
+      "floor": 4,
+      "x": 270,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_270_4",
       "name": "",
       "floor": 4,
-      "x": 1250,
-      "y": 500,
+      "x": 270,
+      "y": 600,
       "type": "corridor"
     },
     {
-      "id": "room_417",
+      "id": "room_431_4",
+      "name": "431",
+      "floor": 4,
+      "x": 340,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_340_4",
+      "name": "",
+      "floor": 4,
+      "x": 340,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_429_4",
+      "name": "429",
+      "floor": 4,
+      "x": 410,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_410_4",
+      "name": "",
+      "floor": 4,
+      "x": 410,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_427_4",
+      "name": "427",
+      "floor": 4,
+      "x": 480,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_480_4",
+      "name": "",
+      "floor": 4,
+      "x": 480,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_425_4",
+      "name": "425",
+      "floor": 4,
+      "x": 550,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_550_4",
+      "name": "",
+      "floor": 4,
+      "x": 550,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_423_4",
+      "name": "423",
+      "floor": 4,
+      "x": 620,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_620_4",
+      "name": "",
+      "floor": 4,
+      "x": 620,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_421_4",
+      "name": "421",
+      "floor": 4,
+      "x": 690,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_690_4",
+      "name": "",
+      "floor": 4,
+      "x": 690,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_419_4",
+      "name": "419",
+      "floor": 4,
+      "x": 760,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_417_4",
       "name": "417",
       "floor": 4,
-      "x": 1250,
-      "y": 650,
+      "x": 830,
+      "y": 680,
       "type": "room",
-      "width": 100,
-      "height": 80
+      "width": 60,
+      "height": 40
     },
     {
-      "id": "corr_bot_417",
+      "id": "corr_m_830_4",
       "name": "",
       "floor": 4,
-      "x": 1250,
-      "y": 500,
+      "x": 830,
+      "y": 600,
       "type": "corridor"
+    },
+    {
+      "id": "room_415_4",
+      "name": "415",
+      "floor": 4,
+      "x": 900,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "room_413_4",
+      "name": "413",
+      "floor": 4,
+      "x": 970,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_970_4",
+      "name": "",
+      "floor": 4,
+      "x": 970,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_411_4",
+      "name": "411",
+      "floor": 4,
+      "x": 1040,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1040_4",
+      "name": "",
+      "floor": 4,
+      "x": 1040,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "room_409_4",
+      "name": "409",
+      "floor": 4,
+      "x": 1110,
+      "y": 680,
+      "type": "room",
+      "width": 60,
+      "height": 40
+    },
+    {
+      "id": "corr_m_1110_4",
+      "name": "",
+      "floor": 4,
+      "x": 1110,
+      "y": 600,
+      "type": "corridor"
+    },
+    {
+      "id": "stairs_M_4",
+      "name": "Лестница",
+      "floor": 4,
+      "x": 800,
+      "y": 600,
+      "type": "staircase"
+    },
+    {
+      "id": "stairs_R_4",
+      "name": "Лестница",
+      "floor": 4,
+      "x": 1000,
+      "y": 600,
+      "type": "staircase"
     }
   ],
   "edges": [
     {
-      "fromId": "entrance_F1",
-      "toId": "stairs_M_F1",
-      "weight": 200,
+      "fromId": "room_140_1",
+      "toId": "corr_m_450_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_L_F1",
-      "toId": "stairs_M_F1",
-      "weight": 400.0,
+      "fromId": "room_Деканат_1",
+      "toId": "corr_m_550_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_M_F1",
-      "toId": "stairs_R_F1",
-      "weight": 400.0,
+      "fromId": "room_136_1",
+      "toId": "corr_m_650_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_101",
-      "toId": "corr_top_101",
-      "weight": 150,
+      "fromId": "room_134_1",
+      "toId": "corr_m_750_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_111",
-      "toId": "corr_bot_111",
-      "weight": 150,
+      "fromId": "room_132_1",
+      "toId": "corr_m_850_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_102",
-      "toId": "corr_top_102",
-      "weight": 150,
+      "fromId": "room_120_1",
+      "toId": "corr_m_950_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_112",
-      "toId": "corr_bot_112",
-      "weight": 150,
+      "fromId": "room_118_1",
+      "toId": "corr_m_1050_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_103",
-      "toId": "corr_top_103",
-      "weight": 150,
+      "fromId": "room_116_1",
+      "toId": "corr_m_1150_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_113",
-      "toId": "corr_bot_113",
-      "weight": 150,
+      "fromId": "room_114_1",
+      "toId": "corr_m_1250_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_104",
-      "toId": "corr_top_104",
-      "weight": 150,
+      "fromId": "room_112_1",
+      "toId": "corr_m_1350_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_114",
-      "toId": "corr_bot_114",
-      "weight": 150,
+      "fromId": "room_106_1",
+      "toId": "corr_m_1450_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_105",
-      "toId": "corr_top_105",
-      "weight": 150,
+      "fromId": "room_104_1",
+      "toId": "corr_m_1550_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_115",
-      "toId": "corr_bot_115",
-      "weight": 150,
+      "fromId": "room_102_1",
+      "toId": "corr_m_1650_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_106",
-      "toId": "corr_top_106",
-      "weight": 150,
+      "fromId": "room_100_1",
+      "toId": "corr_m_1750_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_116",
-      "toId": "corr_bot_116",
-      "weight": 150,
+      "fromId": "room_151_1",
+      "toId": "corr_m_450_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_107",
-      "toId": "corr_top_107",
-      "weight": 150,
+      "fromId": "room_147_1",
+      "toId": "corr_m_530_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "room_117",
-      "toId": "corr_bot_117",
-      "weight": 150,
+      "fromId": "room_145_1",
+      "toId": "corr_m_610_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_L_F1",
-      "toId": "corr_top_101",
-      "weight": 50,
+      "fromId": "room_143_1",
+      "toId": "corr_m_690_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_101",
-      "toId": "corr_bot_111",
-      "weight": 0,
+      "fromId": "room_141_1",
+      "toId": "corr_m_770_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_111",
-      "toId": "corr_top_102",
-      "weight": 150,
+      "fromId": "room_139_1",
+      "toId": "corr_m_850_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_102",
-      "toId": "corr_bot_112",
-      "weight": 0,
+      "fromId": "room_137_1",
+      "toId": "corr_m_930_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_112",
-      "toId": "corr_top_103",
-      "weight": 150,
+      "fromId": "room_125_1",
+      "toId": "corr_m_1010_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_103",
-      "toId": "corr_bot_113",
-      "weight": 0,
+      "fromId": "room_121_1",
+      "toId": "corr_m_1090_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_113",
-      "toId": "stairs_M_F1",
+      "fromId": "room_119_1",
+      "toId": "corr_m_1170_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_117_1",
+      "toId": "corr_m_1250_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_115_1",
+      "toId": "corr_m_1330_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_113_1",
+      "toId": "corr_m_1410_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_111_1",
+      "toId": "corr_m_1490_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_109_1",
+      "toId": "corr_m_1570_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_107_1",
+      "toId": "corr_m_1650_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_105_1",
+      "toId": "corr_m_1730_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_031_1",
+      "toId": "corr_v800_900_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_029_1",
+      "toId": "corr_v800_1000_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_027_1",
+      "toId": "corr_v800_1100_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_025_1",
+      "toId": "corr_v800_1200_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_022_1",
+      "toId": "corr_v800_900_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_020_1",
+      "toId": "corr_v800_1000_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_018_1",
+      "toId": "corr_v800_1100_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_016_1",
+      "toId": "corr_v800_1200_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_028_1",
+      "toId": "corr_b_300_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_010_1",
+      "toId": "corr_b_500_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_012_1",
+      "toId": "corr_b_700_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_014_1",
+      "toId": "corr_b_900_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_01_1",
+      "toId": "corr_b_300_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_03_1",
+      "toId": "corr_b_420_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_05_1",
+      "toId": "corr_b_540_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_07_1",
+      "toId": "corr_b_660_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_09_1",
+      "toId": "corr_b_780_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_013_1",
+      "toId": "corr_b_900_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_015_1",
+      "toId": "corr_b_1020_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_017_1",
+      "toId": "corr_b_1140_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_019_1",
+      "toId": "corr_b_1260_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_Библиотека_1",
+      "toId": "corr_v1200_400_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_Читальный зал_1",
+      "toId": "corr_v1200_200_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_400_1",
+      "toId": "corr_m_450_1",
       "weight": 50.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_M_F1",
-      "toId": "corr_top_104",
-      "weight": 100.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_104",
-      "toId": "corr_bot_114",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_114",
-      "toId": "corr_top_105",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_105",
-      "toId": "corr_bot_115",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_115",
-      "toId": "stairs_R_F1",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_R_F1",
-      "toId": "corr_top_106",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_106",
-      "toId": "corr_bot_116",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_116",
-      "toId": "corr_top_107",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_107",
-      "toId": "corr_bot_117",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F2",
-      "toId": "stairs_M_F2",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_M_F2",
-      "toId": "stairs_R_F2",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_201",
-      "toId": "corr_top_201",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_211",
-      "toId": "corr_bot_211",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_202",
-      "toId": "corr_top_202",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_212",
-      "toId": "corr_bot_212",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_203",
-      "toId": "corr_top_203",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_213",
-      "toId": "corr_bot_213",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_204",
-      "toId": "corr_top_204",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_214",
-      "toId": "corr_bot_214",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_205",
-      "toId": "corr_top_205",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_215",
-      "toId": "corr_bot_215",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_206",
-      "toId": "corr_top_206",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_216",
-      "toId": "corr_bot_216",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_207",
-      "toId": "corr_top_207",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_217",
-      "toId": "corr_bot_217",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F2",
-      "toId": "corr_top_201",
-      "weight": 50,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_201",
-      "toId": "corr_bot_211",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_211",
-      "toId": "corr_top_202",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_202",
-      "toId": "corr_bot_212",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_212",
-      "toId": "corr_top_203",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_203",
-      "toId": "corr_bot_213",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_213",
-      "toId": "stairs_M_F2",
+      "fromId": "corr_m_450_1",
+      "toId": "corr_m_500_1",
       "weight": 50.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_M_F2",
-      "toId": "corr_top_204",
-      "weight": 100.0,
+      "fromId": "corr_m_500_1",
+      "toId": "corr_m_530_1",
+      "weight": 30.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_204",
-      "toId": "corr_bot_214",
-      "weight": 0,
+      "fromId": "corr_m_530_1",
+      "toId": "corr_m_550_1",
+      "weight": 20.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_214",
-      "toId": "corr_top_205",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_205",
-      "toId": "corr_bot_215",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_215",
-      "toId": "stairs_R_F2",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_R_F2",
-      "toId": "corr_top_206",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_206",
-      "toId": "corr_bot_216",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_216",
-      "toId": "corr_top_207",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_207",
-      "toId": "corr_bot_217",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F3",
-      "toId": "stairs_M_F3",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_M_F3",
-      "toId": "stairs_R_F3",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_301",
-      "toId": "corr_top_301",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_311",
-      "toId": "corr_bot_311",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_302",
-      "toId": "corr_top_302",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_312",
-      "toId": "corr_bot_312",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_303",
-      "toId": "corr_top_303",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_313",
-      "toId": "corr_bot_313",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_304",
-      "toId": "corr_top_304",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_314",
-      "toId": "corr_bot_314",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_305",
-      "toId": "corr_top_305",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_315",
-      "toId": "corr_bot_315",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_306",
-      "toId": "corr_top_306",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_316",
-      "toId": "corr_bot_316",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_307",
-      "toId": "corr_top_307",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_317",
-      "toId": "corr_bot_317",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F3",
-      "toId": "corr_top_301",
-      "weight": 50,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_301",
-      "toId": "corr_bot_311",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_311",
-      "toId": "corr_top_302",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_302",
-      "toId": "corr_bot_312",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_312",
-      "toId": "corr_top_303",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_303",
-      "toId": "corr_bot_313",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_313",
-      "toId": "stairs_M_F3",
+      "fromId": "corr_m_550_1",
+      "toId": "corr_m_600_1",
       "weight": 50.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_M_F3",
-      "toId": "corr_top_304",
-      "weight": 100.0,
+      "fromId": "corr_m_600_1",
+      "toId": "corr_m_610_1",
+      "weight": 10.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_304",
-      "toId": "corr_bot_314",
-      "weight": 0,
+      "fromId": "corr_m_610_1",
+      "toId": "corr_m_650_1",
+      "weight": 40.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_314",
-      "toId": "corr_top_305",
-      "weight": 150,
+      "fromId": "corr_m_650_1",
+      "toId": "corr_m_690_1",
+      "weight": 40.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_305",
-      "toId": "corr_bot_315",
-      "weight": 0,
+      "fromId": "corr_m_690_1",
+      "toId": "corr_m_700_1",
+      "weight": 10.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_315",
-      "toId": "stairs_R_F3",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_R_F3",
-      "toId": "corr_top_306",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_306",
-      "toId": "corr_bot_316",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_316",
-      "toId": "corr_top_307",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_307",
-      "toId": "corr_bot_317",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F4",
-      "toId": "stairs_M_F4",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_M_F4",
-      "toId": "stairs_R_F4",
-      "weight": 400.0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_401",
-      "toId": "corr_top_401",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_411",
-      "toId": "corr_bot_411",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_402",
-      "toId": "corr_top_402",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_412",
-      "toId": "corr_bot_412",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_403",
-      "toId": "corr_top_403",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_413",
-      "toId": "corr_bot_413",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_404",
-      "toId": "corr_top_404",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_414",
-      "toId": "corr_bot_414",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_405",
-      "toId": "corr_top_405",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_415",
-      "toId": "corr_bot_415",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_406",
-      "toId": "corr_top_406",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_416",
-      "toId": "corr_bot_416",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_407",
-      "toId": "corr_top_407",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "room_417",
-      "toId": "corr_bot_417",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "stairs_L_F4",
-      "toId": "corr_top_401",
-      "weight": 50,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_401",
-      "toId": "corr_bot_411",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_411",
-      "toId": "corr_top_402",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_402",
-      "toId": "corr_bot_412",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_412",
-      "toId": "corr_top_403",
-      "weight": 150,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_top_403",
-      "toId": "corr_bot_413",
-      "weight": 0,
-      "type": "corridor"
-    },
-    {
-      "fromId": "corr_bot_413",
-      "toId": "stairs_M_F4",
+      "fromId": "corr_m_700_1",
+      "toId": "corr_m_750_1",
       "weight": 50.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_M_F4",
-      "toId": "corr_top_404",
+      "fromId": "corr_m_750_1",
+      "toId": "corr_m_770_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_770_1",
+      "toId": "corr_m_800_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_800_1",
+      "toId": "corr_v800_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_800_1",
+      "toId": "corr_m_850_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_850_1",
+      "toId": "corr_m_900_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_900_1",
+      "toId": "corr_m_930_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_930_1",
+      "toId": "corr_m_950_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_950_1",
+      "toId": "corr_m_1000_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1000_1",
+      "toId": "corr_m_1010_1",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1010_1",
+      "toId": "corr_m_1050_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1050_1",
+      "toId": "corr_m_1090_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1090_1",
+      "toId": "corr_m_1100_1",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1100_1",
+      "toId": "corr_m_1150_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1150_1",
+      "toId": "corr_m_1170_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1170_1",
+      "toId": "corr_m_1200_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1200_1",
+      "toId": "corr_v1200_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_800_1",
+      "toId": "corr_m_1250_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1250_1",
+      "toId": "corr_m_1300_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1300_1",
+      "toId": "corr_m_1330_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1330_1",
+      "toId": "corr_m_1350_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1350_1",
+      "toId": "corr_m_1400_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1400_1",
+      "toId": "corr_m_1410_1",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1410_1",
+      "toId": "corr_m_1450_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1450_1",
+      "toId": "corr_m_1490_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1490_1",
+      "toId": "corr_m_1500_1",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1500_1",
+      "toId": "corr_m_1550_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1550_1",
+      "toId": "corr_m_1570_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1570_1",
+      "toId": "corr_m_1600_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1600_1",
+      "toId": "corr_m_1650_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1650_1",
+      "toId": "corr_m_1700_1",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1700_1",
+      "toId": "corr_m_1730_1",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1730_1",
+      "toId": "corr_m_1750_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_200_1",
+      "toId": "corr_b_300_1",
       "weight": 100.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_404",
-      "toId": "corr_bot_414",
-      "weight": 0,
+      "fromId": "corr_b_300_1",
+      "toId": "corr_b_400_1",
+      "weight": 100.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_414",
-      "toId": "corr_top_405",
-      "weight": 150,
+      "fromId": "corr_b_400_1",
+      "toId": "corr_b_420_1",
+      "weight": 20.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_405",
-      "toId": "corr_bot_415",
-      "weight": 0,
+      "fromId": "corr_b_420_1",
+      "toId": "corr_b_500_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_415",
-      "toId": "stairs_R_F4",
-      "weight": 150,
+      "fromId": "corr_b_500_1",
+      "toId": "corr_b_540_1",
+      "weight": 40.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_R_F4",
-      "toId": "corr_top_406",
-      "weight": 0,
+      "fromId": "corr_b_540_1",
+      "toId": "corr_b_600_1",
+      "weight": 60.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_406",
-      "toId": "corr_bot_416",
-      "weight": 0,
+      "fromId": "corr_b_600_1",
+      "toId": "corr_b_660_1",
+      "weight": 60.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_bot_416",
-      "toId": "corr_top_407",
-      "weight": 150,
+      "fromId": "corr_b_660_1",
+      "toId": "corr_b_700_1",
+      "weight": 40.0,
       "type": "corridor"
     },
     {
-      "fromId": "corr_top_407",
-      "toId": "corr_bot_417",
-      "weight": 0,
+      "fromId": "corr_b_700_1",
+      "toId": "corr_b_780_1",
+      "weight": 80.0,
       "type": "corridor"
     },
     {
-      "fromId": "stairs_L_F1",
-      "toId": "stairs_L_F2",
-      "weight": 100,
+      "fromId": "corr_b_780_1",
+      "toId": "corr_v800_1400_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1400_1",
+      "toId": "corr_b_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_800_1",
+      "toId": "corr_b_900_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_900_1",
+      "toId": "corr_b_1000_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1000_1",
+      "toId": "corr_b_1020_1",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1020_1",
+      "toId": "corr_b_1100_1",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1100_1",
+      "toId": "corr_b_1140_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1140_1",
+      "toId": "corr_b_1200_1",
+      "weight": 60.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1200_1",
+      "toId": "corr_b_1260_1",
+      "weight": 60.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1260_1",
+      "toId": "corr_b_1300_1",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_b_1300_1",
+      "toId": "corr_b_1400_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_800_1",
+      "toId": "corr_v800_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_800_1",
+      "toId": "corr_v800_900_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_900_1",
+      "toId": "corr_v800_1000_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1000_1",
+      "toId": "corr_v800_1100_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1100_1",
+      "toId": "corr_v800_1200_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1200_1",
+      "toId": "corr_v800_1300_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1300_1",
+      "toId": "corr_v800_1400_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v800_1400_1",
+      "toId": "corr_b_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_200_1",
+      "toId": "corr_v1200_300_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_300_1",
+      "toId": "corr_v1200_400_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_400_1",
+      "toId": "corr_v1200_500_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_500_1",
+      "toId": "corr_v1200_600_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_600_1",
+      "toId": "corr_v1200_700_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_700_1",
+      "toId": "corr_m_1200_1",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1200_1",
+      "toId": "corr_v1200_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1200_800_1",
+      "toId": "corr_b_1200_1",
+      "weight": 600.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_M_1",
+      "toId": "corr_m_800_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_R_1",
+      "toId": "corr_m_1400_1",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_232_2",
+      "toId": "corr_m_300_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_230_2",
+      "toId": "corr_m_400_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_228_2",
+      "toId": "corr_m_500_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_226_2",
+      "toId": "corr_m_600_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_224_2",
+      "toId": "corr_m_700_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_222_2",
+      "toId": "corr_m_800_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_220_2",
+      "toId": "corr_m_900_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_218_2",
+      "toId": "corr_m_1000_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_231_2",
+      "toId": "corr_m_300_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_229_2",
+      "toId": "corr_m_400_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_227_2",
+      "toId": "corr_m_500_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_225_2",
+      "toId": "corr_m_600_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_223_2",
+      "toId": "corr_m_700_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_221_2",
+      "toId": "corr_m_800_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_219_2",
+      "toId": "corr_m_900_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_217_2",
+      "toId": "corr_m_1000_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_215_2",
+      "toId": "corr_m_1100_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_213_2",
+      "toId": "corr_m_1200_2",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_Спортзал_2",
+      "toId": "corr_v1000_700_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_Актовый зал_2",
+      "toId": "corr_v1000_400_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_200_2",
+      "toId": "corr_m_300_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_300_2",
+      "toId": "corr_m_400_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_400_2",
+      "toId": "corr_m_500_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_500_2",
+      "toId": "corr_m_600_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_600_2",
+      "toId": "corr_m_700_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_700_2",
+      "toId": "corr_m_800_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_800_2",
+      "toId": "corr_m_900_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_900_2",
+      "toId": "corr_m_1000_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1000_2",
+      "toId": "corr_v1000_1200_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_1200_2",
+      "toId": "corr_m_1100_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1100_2",
+      "toId": "corr_m_1200_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1200_2",
+      "toId": "corr_m_1300_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_400_2",
+      "toId": "corr_v1000_500_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_500_2",
+      "toId": "corr_v1000_600_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_600_2",
+      "toId": "corr_v1000_700_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_700_2",
+      "toId": "corr_v1000_800_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_800_2",
+      "toId": "corr_v1000_900_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_900_2",
+      "toId": "corr_v1000_1000_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_1000_2",
+      "toId": "corr_v1000_1100_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_v1000_1100_2",
+      "toId": "corr_m_1000_2",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1000_2",
+      "toId": "corr_v1000_1200_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_M_2",
+      "toId": "corr_m_800_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_R_2",
+      "toId": "corr_m_1000_2",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_324_3",
+      "toId": "corr_m_300_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_322_3",
+      "toId": "corr_m_400_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_320_3",
+      "toId": "corr_m_500_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_318_3",
+      "toId": "corr_m_600_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_316_3",
+      "toId": "corr_m_700_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_314_3",
+      "toId": "corr_m_800_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_312_3",
+      "toId": "corr_m_900_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_310_3",
+      "toId": "corr_m_1000_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_308_3",
+      "toId": "corr_m_1100_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_306_3",
+      "toId": "corr_m_1200_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_304_3",
+      "toId": "corr_m_1300_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_302_3",
+      "toId": "corr_m_1400_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_325_3",
+      "toId": "corr_m_300_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_323_3",
+      "toId": "corr_m_400_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_321_3",
+      "toId": "corr_m_500_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_319_3",
+      "toId": "corr_m_600_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_317_3",
+      "toId": "corr_m_700_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_315_3",
+      "toId": "corr_m_800_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_313_3",
+      "toId": "corr_m_900_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_311_3",
+      "toId": "corr_m_1000_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_309_3",
+      "toId": "corr_m_1100_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_307_3",
+      "toId": "corr_m_1200_3",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_200_3",
+      "toId": "corr_m_300_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_300_3",
+      "toId": "corr_m_400_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_400_3",
+      "toId": "corr_m_500_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_500_3",
+      "toId": "corr_m_600_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_600_3",
+      "toId": "corr_m_700_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_700_3",
+      "toId": "corr_m_800_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_800_3",
+      "toId": "corr_m_900_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_900_3",
+      "toId": "corr_m_1000_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1000_3",
+      "toId": "corr_m_1100_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1100_3",
+      "toId": "corr_m_1200_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1200_3",
+      "toId": "corr_m_1300_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1300_3",
+      "toId": "corr_m_1400_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1400_3",
+      "toId": "corr_m_1500_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1500_3",
+      "toId": "corr_m_1600_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1600_3",
+      "toId": "corr_m_1700_3",
+      "weight": 100.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_M_3",
+      "toId": "corr_m_800_3",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_R_3",
+      "toId": "corr_m_1000_3",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_436_4",
+      "toId": "corr_m_200_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_434_4",
+      "toId": "corr_m_280_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_432_4",
+      "toId": "corr_m_360_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_430_4",
+      "toId": "corr_m_440_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_428_4",
+      "toId": "corr_m_520_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_426_4",
+      "toId": "corr_m_600_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_424_4",
+      "toId": "corr_m_680_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_422_4",
+      "toId": "corr_m_760_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_420_4",
+      "toId": "corr_m_840_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_418_4",
+      "toId": "corr_m_920_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_416_4",
+      "toId": "corr_m_1000_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_414_4",
+      "toId": "corr_m_1080_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_435_4",
+      "toId": "corr_m_200_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_433_4",
+      "toId": "corr_m_270_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_431_4",
+      "toId": "corr_m_340_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_429_4",
+      "toId": "corr_m_410_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_427_4",
+      "toId": "corr_m_480_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_425_4",
+      "toId": "corr_m_550_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_423_4",
+      "toId": "corr_m_620_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_421_4",
+      "toId": "corr_m_690_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_419_4",
+      "toId": "corr_m_760_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_417_4",
+      "toId": "corr_m_830_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_415_4",
+      "toId": "corr_m_900_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_413_4",
+      "toId": "corr_m_970_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_411_4",
+      "toId": "corr_m_1040_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "room_409_4",
+      "toId": "corr_m_1110_4",
+      "weight": 80.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_200_4",
+      "toId": "corr_m_270_4",
+      "weight": 70.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_270_4",
+      "toId": "corr_m_280_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_280_4",
+      "toId": "corr_m_300_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_300_4",
+      "toId": "corr_m_340_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_340_4",
+      "toId": "corr_m_360_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_360_4",
+      "toId": "corr_m_400_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_400_4",
+      "toId": "corr_m_410_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_410_4",
+      "toId": "corr_m_440_4",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_440_4",
+      "toId": "corr_m_480_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_480_4",
+      "toId": "corr_m_500_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_500_4",
+      "toId": "corr_m_520_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_520_4",
+      "toId": "corr_m_550_4",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_550_4",
+      "toId": "corr_m_600_4",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_600_4",
+      "toId": "corr_m_620_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_620_4",
+      "toId": "corr_m_680_4",
+      "weight": 60.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_680_4",
+      "toId": "corr_m_690_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_690_4",
+      "toId": "corr_m_700_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_700_4",
+      "toId": "corr_m_760_4",
+      "weight": 60.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_760_4",
+      "toId": "corr_m_800_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_800_4",
+      "toId": "corr_m_830_4",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_830_4",
+      "toId": "corr_m_840_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_840_4",
+      "toId": "corr_m_900_4",
+      "weight": 60.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_900_4",
+      "toId": "corr_m_920_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_920_4",
+      "toId": "corr_m_970_4",
+      "weight": 50.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_970_4",
+      "toId": "corr_m_1000_4",
+      "weight": 30.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1000_4",
+      "toId": "corr_m_1040_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1040_4",
+      "toId": "corr_m_1080_4",
+      "weight": 40.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1080_4",
+      "toId": "corr_m_1100_4",
+      "weight": 20.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "corr_m_1100_4",
+      "toId": "corr_m_1110_4",
+      "weight": 10.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_M_4",
+      "toId": "corr_m_800_4",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_R_4",
+      "toId": "corr_m_1000_4",
+      "weight": 0.0,
+      "type": "corridor"
+    },
+    {
+      "fromId": "stairs_M_1",
+      "toId": "stairs_M_2",
+      "weight": 400.0,
       "type": "staircase"
     },
     {
-      "fromId": "stairs_M_F1",
-      "toId": "stairs_M_F2",
-      "weight": 100,
+      "fromId": "stairs_R_1",
+      "toId": "stairs_R_2",
+      "weight": 565.69,
       "type": "staircase"
     },
     {
-      "fromId": "stairs_R_F1",
-      "toId": "stairs_R_F2",
-      "weight": 100,
+      "fromId": "stairs_M_2",
+      "toId": "stairs_M_3",
+      "weight": 400.0,
       "type": "staircase"
     },
     {
-      "fromId": "stairs_L_F2",
-      "toId": "stairs_L_F3",
-      "weight": 100,
+      "fromId": "stairs_R_2",
+      "toId": "stairs_R_3",
+      "weight": 400.0,
       "type": "staircase"
     },
     {
-      "fromId": "stairs_M_F2",
-      "toId": "stairs_M_F3",
-      "weight": 100,
+      "fromId": "stairs_M_3",
+      "toId": "stairs_M_4",
+      "weight": 200.0,
       "type": "staircase"
     },
     {
-      "fromId": "stairs_R_F2",
-      "toId": "stairs_R_F3",
-      "weight": 100,
-      "type": "staircase"
-    },
-    {
-      "fromId": "stairs_L_F3",
-      "toId": "stairs_L_F4",
-      "weight": 100,
-      "type": "staircase"
-    },
-    {
-      "fromId": "stairs_M_F3",
-      "toId": "stairs_M_F4",
-      "weight": 100,
-      "type": "staircase"
-    },
-    {
-      "fromId": "stairs_R_F3",
-      "toId": "stairs_R_F4",
-      "weight": 100,
+      "fromId": "stairs_R_3",
+      "toId": "stairs_R_4",
+      "weight": 200.0,
       "type": "staircase"
     }
   ]
