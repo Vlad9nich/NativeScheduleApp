@@ -241,9 +241,13 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
 
     var liveStatus = LiveStatus.FREE
     var liveRemainingSeconds = 0
+    var liveTargetItem: ClassInfo? = null
+    var nextTargetItem: ClassInfo? = null
+    var nextRemainingSeconds = 0
 
     if (todaySchedule != null && todaySchedule.items.isNotEmpty()) {
-        for (item in todaySchedule.items) {
+        val sortedItems = todaySchedule.items.sortedBy { it.time.split(" - ")[0] }
+        for ((index, item) in sortedItems.withIndex()) {
             val times = item.time.split(" - ")
             if (times.size == 2) {
                 val startParts = times[0].split(":")
@@ -256,10 +260,25 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                         if (liveStatus == LiveStatus.FREE) {
                             liveStatus = LiveStatus.WAITING
                             liveRemainingSeconds = startSeconds - currentTotalSeconds
+                            liveTargetItem = item
                         }
                     } else if (currentTotalSeconds in startSeconds..endSeconds) {
                         liveStatus = LiveStatus.IN_PROGRESS
                         liveRemainingSeconds = endSeconds - currentTotalSeconds
+                        liveTargetItem = item
+                        
+                        if (index + 1 < sortedItems.size) {
+                            val nextItem = sortedItems[index + 1]
+                            val nextTimes = nextItem.time.split(" - ")
+                            if (nextTimes.size == 2) {
+                                val nStartParts = nextTimes[0].split(":")
+                                if (nStartParts.size == 2) {
+                                    val nStartSeconds = nStartParts[0].toInt() * 3600 + nStartParts[1].toInt() * 60
+                                    nextRemainingSeconds = nStartSeconds - currentTotalSeconds
+                                    nextTargetItem = nextItem
+                                }
+                            }
+                        }
                         break
                     }
                 }
@@ -358,7 +377,7 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                         fontFamily = Manrope
                     )
                 }
-                Column(horizontalAlignment = Alignment.End) {
+                Column(horizontalAlignment = Alignment.End, modifier = Modifier.weight(1f)) {
                     Row(verticalAlignment = Alignment.CenterVertically) {
                         Box(
                             modifier = Modifier
@@ -369,8 +388,27 @@ fun ScheduleApp(scheduleData: Map<String, List<WeekSchedule>>, prefs: Preference
                         Spacer(modifier = Modifier.width(6.dp))
                         Text(liveStatus.label, color = liveStatus.color, fontWeight = FontWeight.Bold, fontSize = 14.sp, fontFamily = Manrope)
                     }
+                    if (liveTargetItem != null) {
+                        Text(
+                            text = liveTargetItem?.subject ?: "",
+                            color = Color.White,
+                            fontSize = 14.sp,
+                            fontWeight = FontWeight.Bold,
+                            fontFamily = Oswald,
+                            modifier = Modifier.padding(top = 4.dp),
+                            maxLines = 1,
+                            overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis
+                        )
+                    }
                     if (liveTimeString.isNotEmpty()) {
-                        Text(liveTimeString, color = BrandLightGray, fontSize = 12.sp, modifier = Modifier.padding(top = 4.dp), fontFamily = Manrope)
+                        Text(liveTimeString, color = BrandLightGray, fontSize = 12.sp, modifier = Modifier.padding(top = 2.dp), fontFamily = Manrope)
+                    }
+                    if (nextTargetItem != null && nextRemainingSeconds > 0) {
+                        val h = nextRemainingSeconds / 3600
+                        val m = (nextRemainingSeconds % 3600) / 60
+                        val s = nextRemainingSeconds % 60
+                        val nextStr = if (h > 0) String.format("до след.: %d:%02d:%02d", h, m, s) else String.format("до след.: %02d:%02d", m, s)
+                        Text(nextStr, color = BrandLightGray, fontSize = 12.sp, modifier = Modifier.padding(top = 2.dp), fontFamily = Manrope)
                     }
                 }
             }
